@@ -88,12 +88,76 @@
   {% if about.TECHNOLOGIES.enabled %}
   <section class="clients">
     <h3 class="h3 clients-title">{{about.TECHNOLOGIES.label}}</h3>
-    <ul class="clients-list has-scrollbar">
-      {% for item in about.TECHNOLOGIES["items"] %}
-      <li class="clients-item" data-title="{{item.title}}">
-        <a href="#">
-          <img src="{{item.icon}}" alt="{{item.title}}" width="50" height="50">
+    {% for section in about.TECHNOLOGIES["sections"] %}
+    <div class="technology-section">
+      <h4 class="h4 technology-section-title">{{section.title}}</h4>
+      <ul class="clients-list has-scrollbar">
+        {% for item in section["items"] %}
+        <li class="clients-item" data-title="{{item.title}}">
+          <a href="#">
+            <img src="{{item.icon}}" alt="{{item.title}}" width="50" height="50">
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+
+  <!-- LANGUAGES -->
+  {% if about.LANGUAGES.enabled %}
+  <section class="skill">
+    <h3 class="h3 skills-title">{{about.LANGUAGES.label}}</h3>
+    <ul class="skills-list content-card">
+      {% for item in about.LANGUAGES["items"] %}
+      <li class="skills-item">
+        <div class="title-wrapper">
+          <h5 class="h5">{{item.language}}</h5>
+          {% if about.LANGUAGES.display_percentage_values %}
+          <data value="{{item.proficiency[:-1]}}">{{item.proficiency}}</data>
+          {% endif %}
+        </div>
+        {% if about.LANGUAGES.display_progress_bars %}
+        <div class="skill-progress-bg">
+          <div class="skill-progress-fill" style="width: {{item.proficiency}};"></div>
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <br>
+  {% endif %}
+
+  <!--- CERTIFICATES -->
+  {% if about.CERTIFICATES.enabled %}
+  <section class="certificates">
+    <h3 class="h3 certificates-title">{{about.CERTIFICATES.label}}</h3>
+    <ul class="certificates-list">
+      {% for item in about.CERTIFICATES["items"] %}
+      <li class="certificates-item">
+        {% if item.link and item.link != "#" %}
+        <a href="{{item.link}}" target="_blank" rel="noopener noreferrer" class="certificate-link">
+          <div class="certificate-content">
+            <div class="certificate-icon">
+              <ion-icon name="ribbon-outline"></ion-icon>
+            </div>
+            <h4 class="h4 certificate-name">{{item.title}}</h4>
+            <div class="external-link-icon">
+              <ion-icon name="open-outline"></ion-icon>
+            </div>
+          </div>
         </a>
+        {% else %}
+        <div class="certificate-content">
+          <div class="certificate-icon">
+            <ion-icon name="ribbon-outline"></ion-icon>
+          </div>
+          <h4 class="h4 certificate-name">{{item.title}}</h4>
+        </div>
+        {% endif %}
       </li>
       {% endfor %}
     </ul>
