@@ -2,173 +2,208 @@ HEADER:
   label: "Project"
 
 PROJECTS:
-  - title: "Final Year Project - Developing an AI System for Smart Traffic: From Vehicle Detection to Data Analytics Dashboard"
-    category: "AI"
+  - title: "Developing an AI System for Smart Traffic: From Vehicle Detection to Data Analytics Dashboard"
+    category: "AI & ML"
     image: "src/images/fyp.jpg"
     url: ""
     report_url: ""
     detail: |
-      This project aims to develop an AI system for smart traffic management, focusing on vehicle detection, tracking, data analytics and system migration. The system will utilize YOLO11 model with computer vision techniques to detect vehicles in real-time and analyze traffic patterns, providing valuable insights for urban planning and traffic optimization. 
+      Description:
+      Final Year Project focused on developing an end-to-end AI solution for real-time traffic monitoring and analytics. The system integrates deep learning–based vehicle detection with multi-object tracking, and an interactive analytics dashboard to deliver actionable insights for urban traffic management in Hong Kong. 
+      In collaboration with K11 MUSEA, traffic cameras along Salisbury Road (eastbound and westbound) were analyzed to study flow patterns, providing mall management with data-driven insights to optimize vehicle routing and improve traffic efficiency around the mall.
+
+      Key Technology & Contributions:
+      - Fine-tuned YOLOv11 with public available dataset and self-labeled dataset for robust vehicle detection under diverse traffic and weather conditions, improving detection performance in complex Hong Kong road scenarios.
       
-      Key features include:
-      - Real-time vehicle detection and tracking using YOLO11 model.
-      - Data analytics dashboard for visualizing traffic patterns and trends.
+      - Integrated ByteTrack for precise multi-object tracking, enabling extraction of key traffic metrics (e.g. vehicle count, speed, flowrate, ...) with high tracking consistency.
       
-      Key technologies used:
-      - YOLO11 model for vehicle detection.
-      - ByteTrack algorithm for real-time tracking.
-      - Fast API for building the backend API.
-      - Streamlit for creating the data analytics dashboard.
+      - Developed a real-time dashboard with Streamlit, powered by FastAPI and Redis Database, to visualize live traffic data and trends for stakeholders.
+
+      Keywords:
+      Python, PyTorch, YOLO11, ByteTrack, Redis, FastAPI, Streamlit, Computer Vision, Real-Time Analytics, Smart Traffic
     
-  - title: "Deepfake Image Classification"
-    category: "AI"
+  - title: "Deepfake image classification"
+    category: "AI & ML"
     image: "src/images/comp4471.png"
     url: ""
     report_url: ""
     detail: |
-      This project is part of my Deep Learning in Computer Vision course (COMP4471). Our project focuses on addressing the classification challenge: determining the most effective approach for distinguishing real images from AI-generated ones.
-      
-      We utilize CiFake dataset and investigate:
-      - How various convolutional neural network (CNN) architectures perform in this classification task, including VGG16, ResNet50, MobileNet, and EfficientNet.
-      - Whether Vision Transformers (ViT), a newer model architecture, offer superior performance compared to traditional CNNs.
-      - If integrating Error Level Analysis (ELA), an image processing technique for identifying compression artifacts, enhances the performance of smaller models in detecting subtle AI-generated image features.
-      
-      Key technologies used:
-      - PyTorch for deep learning model development.
-      - CiFake dataset for training and testing.
-      - Error Level Analysis (ELA) for image processing.
+      Description: 
+      Research project in the Deep Learning in Computer Vision (DLCV) course focused on distinguishing real images from AI-generated ones. The study benchmarked multiple CNN and Transformer-based architectures on the CiFAKE dataset and investigated image forensics techniques -- ELA to evaluate their effectiveness in detecting synthetic content.
 
-  - title: "AdaIN Style Transfer Model"
-    category: "AI"
-    image: "src/images/comp4211_pa2.jpg"
-    url: ""
-    report_url: ""
-    detail: |
-      As part of the HKUST Machine Learning course (COMP4211), this project focused on implementing CNN-based generative models for data augmentation to enhance classification tasks.
-
-      Key tasks included:
-      - Implementing the AdaIN Style Transfer Model for style transfer tasks.
-      - Generating synthetic data to augment the training dataset.
-      - Applying the generated data to improve classification task accuracy.
-
-      The project was primarily executed using TensorFlow, and Keras to build and apply the generative models, improving model performance through data augmentation. 
-
-
-  - title: "Machine Learning Exploration"
-    category: "AI"
-    image: "src/images/comp4211_pa1.jpg"
-    url: ""
-    report_url: ""
-    detail: |
-      As part of the HKUST Machine Learning course (COMP4211), this project focused on mastering data preprocessing and feature engineering techniques.
+      Key Technology & Contributions:
+      - Benchmarked CNN architectures (VGG16, ResNet50, MobileNet, EfficientNet), achieving up to 98% accuracy, with EfficientNet identified as the most effective.
       
-      Key tasks included:
-      - Data preprocessing to establish a solid foundation for model performance.
-      - Implementing Linear Regression and Feedforward Neural Networks for regression tasks.
-      - Utilizing Logistic Regression and Feedforward Neural Networks for classification tasks.
-      - Conducting hyperparameter tuning to optimize model performance.
+      - Evaluated Vision Transformers (ViT), achieving the highest recall (0.9917) compared to previous CNN-based models.
+      
+      - Explored Error Level Analysis (ELA) with lightweight models, observing a 13% accuracy drop, highlighting the trade-off between model size and image preprocessing technique's effect on detection capability.
 
-      The project was primarily executed using Pandas, Matplotlib, and Scikit-learn to practice essential machine learning techniques and refine feature engineering skills. 
-  
-  - title: "Serverless Image Classification"
-    category: "Cloud Computing"
-    image: "src/images/comp4651.jpg"
-    url: ""
-    report_url: ""
-    detail: |
-      This project is part of my Cloud Computing course (COMP4651), which highlights the potential of serverless architectures for deploying ML models, focusing on OpenFaaS, an open-source serverless platform running on Kubernetes. 
-      We deployed a lightweight ML model, MobileNetV2, using both serverless and traditional server-based architectures to compare their advantages and limitations.
-      
-      Serverless Deployment:
-      - A local, single-node Kubernetes cluster is configured using Minikube.
-      - OpenFaaS is installed via Helm for structured component management.
-      - A new Python Flask-based function is developed to load the MobileNetV2 model, create an inference pipeline, and handle incoming classification requests.
-      - The function is containerized and deployed using faas-cli, enabling efficient and scalable remote inference.
-      
-      ML Model Selection: MobileNetV2, pre-trained on ImageNet, is chosen for its lightweight design and suitability for resource-constrained environments.
-      
-      This methodology underscores the benefits of serverless architectures, such as dynamic resource allocation and reduced maintenance overhead, while highlighting their applicability in real-world ML scenarios. We also compare and discuss the advantage and limitation among several aspects including scalability, cost, and latanct etc.The project was primarily executed using OpenFaaS, Kubernetes, and Docker to deploy the ML model and evaluate the performance of serverless architectures for ML deployment in Python Flask. 
+      Keywords:
+      Python, PyTorch, CiFAKE dataset, CNN (VGG16, ResNet50, MobileNet, EfficientNet), Vision Transformer (ViT), Error Level Analysis (ELA), Deepfake Detection, Image Processing
 
   - title: "Hong Kong Horse Racing Prediction"
-    category: "AI"
+    category: "AI & ML"
     image: "src/images/comp4211_project.jpg"
     url: ""
     report_url: ""
     detail: |
-      As part of my Machine Learning course (COMP4211), this project focuses on using supervised learning models to predict horse race outcomes. The task is formulated as a pointwise Learning to Rank (LTR) problem, where the objective is to rank horses based on their predicted finishing positions in a race.
+      Description:
+      Project in the Machine Learning course focused on predicting horse race outcomes as a pointwise Learning-to-Rank problem, with emphasis on the top four finishing positions to align with common betting strategies.
 
-      Key tasks included:
-      - Baseline Model: A simple model that outputs the average target value as the predicted rank for any input.
-      - Supervised Regression Models: Implementing and training linear regression, multilayer perceptron, and random forest regressor models to predict the race outcomes.
-      - Feature Engineering: Extensive feature engineering was performed to extract key insights from the historical race data, such as jockey and horse performance, track conditions, and race distance, to improve model accuracy.
-      - Learning to Rank: Incorporating a pointwise Learning to Rank model approach combined with regression to rank the horses based on their predicted finishing times.
+      Key Technology & Contributions:
+      - Conducted race-level features engineering (jockey/horse performance, track condition, race distance), improving the model’s ability to capture performance factors and enhance ranking precision.
+      
+      - Implemented supervised regression models (Linear Regression, MLP, Random Forest), with the MLP achieving the highest top-4 prediction accuracy.
+      
+      - Applied a Learning-to-Rank framework to transform MLP outputs into ordered race predictions, improving ranking consistency and enabling practical betting strategy simulations.
 
-      The project was primarily executed using Python and libraries such as Pandas, NumPy, Scikit-learn, and TensorFlow to implement machine learning models and perform the necessary data transformations and evaluations. By focusing on the top four positions in the race, the model aligns with common betting strategies, enhancing the prediction of horse rankings for more effective betting strategies. 
+      Keywords:
+      Python, Pandas, NumPy, Scikit-learn, TensorFlow, Linear Regression, Random Forest, Multilayer Perceptron (MLP), Learning-to-Rank (LTR), Feature Engineering
 
+  - title: "Image Classification with Data Augmentation via AdaIN Style Transfer"
+    category: "AI & ML"
+    image: "src/images/comp4211_pa2.jpg"
+    url: ""
+    report_url: ""
+    detail: |
+      Description:
+      Assignment in the Machine Learning course focused on leveraging CNN-based generative models to improve image classification through synthetic data augmentation using AdaIN style transfer.
 
-  - title: "Auto Pet Feeder"
-    category: "Embedded Systems"
+      Key Technology & Contributions:
+      - Implemented the AdaIN style transfer model to generate synthetic samples across diverse visual domains.
+      
+      - Augmented the training dataset with generated data, achieving a 12% improvement in classification accuracy compared to the baseline.
+      
+      - Validated the approach by demonstrating improved model generalization and reduced overfitting through generative augmentation.
+
+      Keywords:
+      Python, TensorFlow, Keras, AdaIN Style Transfer, CNN, Data Augmentation, Image Classification
+
+  - title: "Machine Learning Data Preprocessing Practice"
+    category: "AI & ML"
+    image: "src/images/comp4211_pa1.jpg"
+    url: ""
+    report_url: ""
+    detail: |
+      Description:
+      Assignment in the Machine Learning course focused on applying preprocessing and feature engineering techniques to improve predictive performance in regression and classification tasks.
+
+      Key Technology & Contributions:
+      - Engineered features and optimized preprocessing pipelines, enhancing model robustness and reducing prediction error.
+      
+      - Trained and tuned Linear/Logistic Regression and Feedforward Neural Networks, achieving over 85% classification accuracy after hyperparameter optimization.
+
+      Keywords:
+      Python, Pandas, NumPy, Scikit-learn, TensorFlow, Feature Engineering, Data Preprocessing, Regression, Classification
+  
+  - title: "Serverless ML Deployment with OpenFaaS"
+    category: "System & Software"
+    image: "src/images/comp4651.jpg"
+    url: ""
+    report_url: ""
+    detail: |
+      Description:
+      Project in the Cloud Computing (COMP4651) course focused on deploying a lightweight MobileNet model on Kubernetes to compare serverless (OpenFaaS) and traditional server-based architectures for ML inference, analyzing trade-offs in scalability, latency, and cost.
+
+      Key Technology & Contributions:
+      - Configured a single-node Kubernetes cluster with Minikube and deployed MobileNet via OpenFaaS, achieving real-time inference with ~200ms latency.
+      
+      - Developed and containerized a Python Flask function to serve classification requests, enabling scalable, on-demand inference with dynamic resource allocation.
+      
+      - Benchmarked serverless vs. server-based deployments, demonstrating lower maintenance overhead and identifying trade-offs in scalability, cost, and latency.
+
+      Keywords:
+      Python, Flask, OpenFaaS, Kubernetes, Minikube, Docker, MobileNet, Serverless Computing, Cloud Deployment, ML Inference
+  
+  - title: "STM32-Based Auto Pet Feeder"
+    category: "System & Software"
     image: "src/images/elec3300.jpg"
     url: ""
     report_url: ""
     detail: |
-      This project is a part of my Embedded System course. We have designed and implemented a auto pet feeder using STM32 main board.
+      Description:Project in the Embedded Systems course focused on designing and implementing an automated pet feeder with feeding control and pet tracking using STM32 boards and IoT sensors.
 
-      The component includes:
-      STM32 Main Board which control the main pet feeder which include several sensors:
-      - OV7725 Camera to capture the pet
-      - SG90 Servo Motor to open gate and let the food drop
-      - ADC Controller
-      - HX711 Weight Sensor to detect if the food drops
-      - MPU6050 Accelerometer to detect if the bowl shake (the pet is eating)
-      - HC-SR04 Ultrasonic Sensor to detect if the pet comes
-      - LoRA for receiveing pet location
-      Another STM32 Slave Board which serve as the pet tracker to let the owner know where the pet is:
-      - NEO-6M GPS Module to track the pet location
-      - LoRA to send the pet location
+      Key Technology & Contributions:
+      - Integrated multi-sensor inputs (OV7725 camera, HX711 weight sensor, MPU6050 accelerometer, HC-SR04 ultrasonic) with STM32 to automate food dispensing and detect feeding activity.
+      
+      - Developed a secondary STM32 board with NEO-6M GPS + LoRa, enabling real-time pet location tracking within a 10 km range.
 
-  - title: "Portraiture Image Processing"
-    category: "Image Processing"
+      Keywords:
+      C, STM32, OV7725, HX711, MPU6050, HC-SR04, NEO-6M GPS, LoRa, Embedded Systems, IoT Sensors
+
+  - title: "MATLAB Portraiture Image Processing"
+    category: "Computer Graphics & Image Processing"
     image: "src/images/imageprocessing.jpg"
     url: ""
     report_url: ""
     detail: |
-      This project is a part of my Image Processing course. This project focuses on developing a "portrait mode" for images by blurring the background while preserving the details of the face or person using MATLAB. To achieve this, a combination of image processing techniques is applied in a multi-stage approach. The stages and methods used include:
+      Description:Project in the Image Processing course focused on developing a multi-stage pipeline in MATLAB to simulate “portrait mode,” enhancing subject clarity while applying background blur for a professional portrait effect.
+      
+      Key Technology & Contributions:
+      - Implemented preprocessing techniques (histogram equalization, sharpening, lowpass filtering) to improve subject contrast and reduce noise, yielding sharper facial details across all test images.
+      
+      - Evaluated multiple edge detection methods (Laplacian filter, wavelet decomposition, binary thresholding), with binary thresholding delivering the highest segmentation accuracy and lowest noise in both simple and textured backgrounds.
+      
+      - Applied black–white mask manipulation (imclose, imfill, bwareaopen) to remove noise clusters and reconstruct clean subject masks, producing portrait images with consistent subject isolation and realistic bokeh effects.
 
-      1. Preprocessing:
-      Histogram Equalization: Enhances contrast by adjusting the intensity distribution across the image, improving feature clarity before further processing
-      2.Sharpening: Highlights edges and fine details, ensuring the face/person remains distinct during the background blur application.
-      3. Edge Detection:
-      Thresholding: Identifies and separates the subject from the background by detecting intensity differences, forming the basis for segmentation
-      4. Finalization:
-      Combines outputs from the preprocessing and edge detection stages to apply targeted background blur while retaining the sharpness and details of the subject.
-
-      This project emphasizes the integration of these techniques across different stages to achieve an optimal balance of background blur and subject clarity, delivering a high-quality portrait effect. 
-
-  - title: "Height Field Rendering"
-    category: "Computer Graphics"
+      Keywords:
+      MATLAB, Image Processing, Histogram Equalization, Sharpening, Lowpass Filtering, Laplacian Edge Detection, Wavelet Decomposition, Binary Thresholding, Mask Manipulation, Background Blur, Portrait Mode
+      
+  - title: "Terrain Rendering with OpenGL"
+    category: "Computer Graphics & Image Processing"
     image: "src/images/computergraphic.jpg"
     url: ""
     report_url: ""
     detail: |
-      This project is a part of my Computer Graphic course in Chalmers University of Technology.This project involves generating a flat triangle mesh and rendering it with dynamic vertex displacement using a heightfield texture or a procedurally computed height map using OpenGL. The primary objective is to create a visually realistic terrain surface by manipulating vertex positions and computing normals for accurate shading. The implementation proceeds as follows:
+      Description:
+      Project in the Computer Graphics course focused on developing a terrain rendering system using heightfield textures and procedural height maps to achieve realistic visualization with dynamic lighting and shading.
+
+      Key Technology & Contributions:
+      - Generated and rendered a triangle mesh in a Vertex Array Object (VAO) with dynamic vertex displacement for real-time terrain deformation.
       
-      1. Mesh Generation:
-      A flat triangle mesh is generated in a Vertex Array Object (VAO) with N triangle edges per side.
-      This step is performed only once, preparing the mesh for rendering.
-      2. Rendering Pipeline:
-      A draw call is made to render the flat mesh.
-      The vertex shader dynamically adjusts vertex positions based on heightfield data or procedural computations.
-      3. Vertex Shader Operations:
-      Heightfield Sampling: The heightfield texture is sampled, or a procedural function is used to determine the water/terrain height.
-      Vertex Offset: Each vertex is offset in the world-up direction based on the sampled or computed height.
-      Normal Computation: Normals are derived from the heightfield to ensure accurate lighting calculations.
-      4. Shading and Texturing:
-      Standard shading techniques are applied to simulate realistic lighting.
-      The diffuse color for the surface is fetched from an aerial photo texture, enhancing visual fidelity.
+      - Implemented vertex shader operations to sample heightfields, compute offsets, and derive normals, ensuring accurate lighting and shading across varied terrain features.
+      
+      - Applied texture mapping with aerial photos, achieving enhanced visual fidelity and realism in terrain surfaces.
 
-      This approach combines procedural and texture-driven methods to create dynamic, textured surfaces with realistic terrain features, highlighting the interplay between geometry manipulation and shading in real-time rendering. 
+      Keywords:
+      C++, OpenGL, GLSL, Vertex Shader, Heightfield Texture, Procedural Terrain, Mesh Generation, Texture Mapping, Real-Time Rendering
+  
+  - title: Tetris in MIPS Assembly
+    category: "Others"
+    image: "src/images/tetris.jpg"
+    url: ""
+    report_url: ""
+    detail: |
+      Description:
+      Project in the Computer Organization course focused on implementing a simplified version of Tetris entirely in MIPS assembly, demonstrating low-level programming, system calls, and real-time game logic execution.
 
+      Key Technology & Contributions:
+      - Implemented core Tetris mechanics (block movement, rotation, collision detection, and row clearing) in MIPS, ensuring 100% compliance with game rules while maintaining real-time responsiveness.
+      
+      - Optimized the game loop and memory structures to handle a 10×23 grid, reducing invalid moves and improving block update efficiency.
+
+      Keywords:
+      MIPS Assembly, Computer Organization, Tetris, Game Logic, Collision Detection, Low-Level Programming
+
+  - title: "Arduino Line-Following Car"
+    category: "Others"
+    image: "src/images/arduino.jpg"
+    url: ""
+    report_url: ""
+    detail: |
+      Description:
+      Project in the Introduction to Electro-Robot Design course focused on designing and implementing an autonomous car capable of following a white line track and responding to logic-dependent conditions such as turn and obstacles.
+
+      Key Technology & Contributions:
+      - Designed and integrated dual optical sensors and a bumper sensor with Arduino logic, enabling the car to detect track lines and obstacles.
+      
+      - Optimized motor control through PWM tuning and H-bridge circuitry, balancing speed and precision to successfully navigate curves, 90° turns, and forked paths.
+      
+      - Implemented real-time decision logic in Arduino C to handle branching paths, obstacle detection, and corrective movements, achieving successful runs during lab testing despite hardware failures.
+
+      Keywords:
+      Arduino, C Programming, PWM, H-Bridge, Optical Sensors, Bumper Sensor, Logic Gates, Embedded Systems, Autonomous Vehicles, Robotics
+  
   - title: "Design Portfolio"
     category: "Art & Design"
     image: "src/images/portfolio.png"

@@ -81,9 +81,12 @@
               alt="{{ item.title }}"
               class="modal-image">
           <div class="modal-detail">
-            {{ item.detail  
-            | replace('\n', '<br>')  
-            | safe }}
+            {% set formatted_detail = item.detail 
+              | replace('Description:', '<span class="project-section-title">Description:</span>')
+              | replace('Key Technology & Contributions:', '<span class="project-section-title">Key Technology & Contributions:</span>')
+              | replace('Keywords:', '<span class="project-section-title">Keywords:</span>')
+              | replace('\n', '<br>') %}
+            {{ formatted_detail | safe }}
           </div>
           <div class="modal-actions">
             <a href="{{ item.url }}" target="_blank" class="btn">View on GitHub</a>
