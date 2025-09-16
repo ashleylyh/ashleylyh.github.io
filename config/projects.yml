@@ -170,7 +170,7 @@ PROJECTS:
   
   - title: Tetris in MIPS Assembly
     category: "Others"
-    image: "src/images/tetris.jpg"
+    image: "src/images/comp2611.png"
     url: ""
     report_url: ""
     detail: |
@@ -187,7 +187,7 @@ PROJECTS:
 
   - title: "Arduino Line-Following Car"
     category: "Others"
-    image: "src/images/arduino.jpg"
+    image: "src/images/elec1100.png"
     url: ""
     report_url: ""
     detail: |
