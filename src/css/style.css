@@ -204,6 +204,12 @@ article {
   color: var(--main-1);
   box-shadow: var(--shadow-1);
   z-index: 1;
+  transition: var(--transition-1);
+}
+
+.icon-box:hover {
+  color: var(--orange-yellow-crayola);
+  transform: translateY(-2px);
 }
 
 .icon-box::before {
@@ -470,7 +476,7 @@ main {
 }
 
 .social-item .social-link:hover {
-  color: var(--light-gray);
+  color: var(--orange-yellow-crayola);
 }
 
 /*-----------------------------------*\
@@ -507,7 +513,7 @@ main {
 
 .navbar-link:hover,
 .navbar-link:focus {
-  color: var(--light-gray-70);
+  color: var(--orange-yellow-crayola);
 }
 
 .navbar-link.active {
@@ -745,6 +751,7 @@ main {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   opacity: 1;
+  color: var(--orange-yellow-crayola);
 }
 
 .modal-close-btn ion-icon {
@@ -994,7 +1001,7 @@ main {
 }
 
 .experience-tech strong {
-  color: var(--white-2);
+  color: var(--orange-yellow-crayola);
   font-weight: var(--fw-500);
 }
 
@@ -1050,7 +1057,7 @@ main {
 .coursework-title {
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
-  color: var(--white-2);
+  color: var(--orange-yellow-crayola);
   margin-bottom: 6px;
 }
 
@@ -1210,6 +1217,12 @@ main {
 }
 
 /* 4. Icon box (eye or link) */
+/* show icon when hovering the image */
+.project-img:hover .project-item-icon-box {
+  --scale: 1;
+  opacity: 1;
+}
+
 .project-item-icon-box {
   --scale: 0.8;
   position: absolute;
@@ -1220,16 +1233,12 @@ main {
   padding: 18px;
   border-radius: 12px;
   background: var(--jet);
-  color: var(--main-1);
+  color: var(--orange-yellow-crayola);
   opacity: 0;
   z-index: 2;
   transition: var(--transition-1);
 }
-/* show icon when hovering the image */
-.project-img:hover .project-item-icon-box {
-  --scale: 1;
-  opacity: 1;
-}
+
 /* ensure link-icon variant has pointer cursor */
 .project-item-icon-box.link-icon {
   cursor: pointer;
@@ -1304,6 +1313,11 @@ main {
   font-size: 1.5rem;
   color: var(--white-2);
   cursor: pointer;
+  transition: var(--transition-1);
+}
+
+.modal-close:hover {
+  color: var(--orange-yellow-crayola);
 }
 
 .modal-detail {
@@ -1414,7 +1428,7 @@ main {
 }
 
 .blog-meta .dot {
-  background: var(--light-gray-70);
+  background: var(--orange-yellow-crayola);
   width: 4px;
   height: 4px;
   border-radius: 4px;
@@ -1493,6 +1507,7 @@ main {
 
 .form-input:focus {
   border-color: var(--main-1);
+  box-shadow: 0 0 0 2px hsla(45, 54%, 58%, 0.2);
 }
 
 textarea.form-input {
@@ -1549,6 +1564,11 @@ textarea.form-input::-webkit-resizer {
 
 .form-btn:hover::before {
   background: var(--bg-gradient-main-2);
+}
+
+.form-btn:focus {
+  outline: 2px solid var(--orange-yellow-crayola);
+  outline-offset: 2px;
 }
 
 .form-btn:disabled {
@@ -1994,7 +2014,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .filter-item button:hover {
-    color: var(--light-gray-70);
+    color: var(--orange-yellow-crayola);
   }
 
   .filter-item button.active {
