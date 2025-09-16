@@ -63,6 +63,7 @@
   --main-2: hsl(180, 42%, 67%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --orange-yellow-crayola: hsl(45, 54%, 58%);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
@@ -435,7 +436,6 @@ main {
 }
 
 .contact-info {
-  max-width: calc(100% - 46px);
   width: calc(100% - 46px);
 }
 
@@ -813,6 +813,7 @@ main {
 .clients-item {
   min-width: 50%;
   scroll-snap-align: start;
+  position: relative;
 }
 
 .clients-item img {
@@ -825,17 +826,13 @@ main {
   filter: grayscale(0);
 }
 
-.clients-item {
-  position: relative;
-}
-
-/* 建立一個隱藏的 ::after 作為 tooltip */
+/* Tooltip for client items */
 .clients-item::after {
-  content: attr(data-title); /* 讀 data-title 屬性 */
+  content: attr(data-title);
   position: absolute;
-  bottom: 100%; /* 在圖示正上方 */
+  bottom: 100%;
   left: 50%;
-  transform: translateX(-50%) /* 置中 */ translateY(-8px); /* 往上推一些 */
+  transform: translateX(-50%) translateY(-8px);
   padding: 4px 8px;
   background: rgba(64, 58, 58, 0.75);
   color: #fff;
@@ -845,11 +842,10 @@ main {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease;
-  /* 不要讓 tooltip 本身被 scrollbar 切掉 */
   z-index: 10;
 }
 
-/* 滑鼠移進到 li 時顯示 tooltip */
+/* Show tooltip on hover */
 .clients-item:hover::after {
   opacity: 1;
 }
@@ -2425,7 +2421,7 @@ textarea.form-input::-webkit-resizer {
 }
 
 /* For non-clickable logos */
-.position-logo:not(.position-logo-link .position-logo):hover {
+.position-logo:hover:not(.position-logo-link .position-logo) {
   transform: scale(1.05);
 }
 
@@ -2434,4 +2430,17 @@ textarea.form-input::-webkit-resizer {
   align-items: center;
   flex-wrap: wrap;
   gap: 4px;
+}
+
+/*-----------------------------------*\
+  #PROJECT SECTION TITLES
+\*-----------------------------------*/
+
+.project-section-title {
+  color: var(--main-1);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-5);
+  display: block;
+  margin-top: 12px;
+  margin-bottom: 4px;
 }
