@@ -7,11 +7,18 @@ EDUCATION:
   items:
     - period: "2015/8 - 2021/6"
       institution: "National Experimental High School at Hsinchu Science Park (Taiwan)"
-      description: "Graduated with GPA 4.0/4.3, serve as the financial manager of Dance society and the Lead Coordinator of Joint-Club Annual Performance."
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQECpkyoc0EHfJd57W9w0iUzSBsPxcuOOclqg&s"
+      description: |
+        Graduated with GPA 4.0/4.3
+        Financial manager of Dance society
+        Lead Coordinator of Joint-Club Annual Performance
       coursework:
     - period: "2023/8 - 2024/1"
       institution: "Chalmers University of Technology (Sweden)"
-      description: "Exchanged to Chalmers University of Technology in Sweden for one semester, focusing on advanced computer science courses and cultural experiences."
+      logo: "https://media.licdn.com/dms/image/v2/C4E0BAQFdK9pXmsNksw/company-logo_100_100/company-logo_100_100/0/1675779390326/chalmers_university_of_technology_logo?e=1761177600&v=beta&t=BVPB7xxBenGevO1xu5AzWXtM7LRA5Q9ADaEYwydSWcw"
+      description: | 
+        School Nominated Exchange Study in Master Level Courses
+        Focusing on advanced computer science courses and cultural experiences
       coursework:
         - "Applied Signal Processing"
         - "Computer Graphic"
@@ -19,7 +26,10 @@ EDUCATION:
         - "Algorithm"
     - period: "2021/8 - 2025/7"
       institution: "The Hong Kong University of Science and Technology (Hong Kong)"
-      description: "Graduated with Second Class Honours (Division One) in BEng in Computer Engineering with a minor in Big Data Technology."
+      logo: "https://media.licdn.com/dms/image/v2/D560BAQEAi2tXX6yTVg/company-logo_100_100/B56ZWvKUEqHsAc-/0/1742400471801/hkust_logo?e=1761177600&v=beta&t=0RRqdvcxaUQktIOxuCYMgAOQkv223zNRoMo5OEA22VI"
+      description: |
+        BEng in Computer Engineering with a minor in Big Data Technology.
+        Graduated with Second Class Honors, Division I  (Top 22%, Ranked 25th / 113)
       coursework:
         - "Machine Learning"
         - "Deep Learning in Computer Vision"
@@ -28,8 +38,13 @@ EDUCATION:
         - "Computer Architecture"
         - "Operating Systems"
         - "Cloud Computing and Big Data Systems"
-        - "Signal Processing"
+        - "Signal and System"
+        - "Embedded System"
         - "Object-Oriented Programming"
+        - "Probability and Random Processing"
+        - "Discrete Mathematics"
+        - "Matrix Algebra and Applications"
+        - "Calculus I & II, Multivariable Calculus"
 
 
 AWARD:
@@ -44,103 +59,113 @@ EXPERIENCE:
   enabled: true
   label: "Experience"
   items:
-    - period: "2025/7 - Present"
-      position: "Research Assistant @ Academia Sinica (Taiwan)"
-      description: ""
-    - period: "2024/7 - 2025/7"
-      position: "Lead Project Coordinator @ HKUST Path Advisor"
-      description: 
-        - "Coordinator of path advisor student team, cooperating with professor and ITSC department."
-        - "Responsible for teams' communication, and production/ development of new features."
-        - "Issue-shooting to provide a better user experience, and handle user feedback to improve the map application."
+    - period: "07/2025 - Present"
+      position: "Research Assistant @ Academia Sinica, Institute of Statistical Science (Taipei, Taiwan)"
+      logo: "https://d5cdve4ckngvw.cloudfront.net/math_web/assets/sinica_logo-5e6d7a947eb553dd725908e6f4243f9f509288820ccdcaee36f1176c112e65f1.png"
+      logo_link: "https://www.stat.sinica.edu.tw/eng/index.php?"
+      description: |
+        Project PI: Prof. Hsin-Chou Yang
+      technologies:
+    - period: "08/2024 - 08/2025"
+      position: "Lead Project Coordinator @ HKUST Path Advisor (Hong Kong)"
+      logo: "https://media.licdn.com/dms/image/v2/C560BAQGhk4jCqa2KAA/company-logo_100_100/company-logo_100_100/0/1662557811469?e=1761177600&v=beta&t=Zog4uVa8-F_v5fsYoe_-g56WNzAtBXLtODiz2xW1K_A"
+      logo_link: "https://pathadvisor.ust.hk/floor/Overall/at/normalized/1550,919,3"
+      description: |
+        Project PI: Prof. Raymond Wong
+        Progressed from frontend developer to project coordinator, **leading a 10+ member cross-functional team** to deliver new features and manage development cycles.
+        **Collaborated with HKUST departments** (Campus Management Office and ITSC) to integrate campus updates, ensuring map synchronization and accuracy.
+        Streamlined internal communication and workflows, reducing feature delivery time and improving team efficiency.
+        Resolved **20+ user-reported issues** and introduced UX enhancements, contributing to a **15% increase** in active student users.
       technologies:
         - Leadership
         - Communication
         - Project Management
         - Full Stack Development
-    - period: "2024/6 - 2024/8"
-      position: "Autonomous Driving Software Engineer Intern @ ITRI (Taiwan)"
+    - period: "06/2024 - 08/2024"
+      position: "Simulation Team Software Engineer Intern  @ ITRI, Autonomous Vehicle Lab (Hsinchu, Taiwan)"
+      logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGq_1hReV7xAg/company-logo_100_100/company-logo_100_100/0/1644458028692/itri_logo?e=1761177600&v=beta&t=9ehiVkZWkXKehab1y6YTSrQehir-y-2orlOJK2nVdXg"
+      logo_link: "https://www.itri.org.tw/eng"
       description:
-       - "Developed simulation scenario management system's backend data logic and API endpoints using TypeScipt and Python for efficient data management."
-       - "Set up and develop a server for automating visualizing simulation scenarios, including schematic image and video generation."
-       - "Gained expertise in MongoDB, API development, and multithreading for efficient resource allocation."
-       - "Documentation and Unit testing achieve 95% coverage for the scenario management system."
+       - Developed APIs for retrieving scenario data (OpenSCENARIO) and runtime parameters from **MongoDB**, reducing query latency and improving internal data accessibility for simulation testing workflows across the AV.
+       - Developed **automated visualization pipeline** of simulation scenarios (schematic images & videos via esmini), cutting manual validation time and enabling faster scenario iteration for autonomous vehicle testing.
+       - Integrated webhooks into the scenario management system to synchronize correlated datasets, eliminating data inconsistencies and streamlining cross-team collaboration.
+       - Achieved over **95% coverage** for unit tests (Pytest) and documentation (JSDoc), ensuring early defect detection and improving developer efficiency by making the codebase easier to understand, maintain, and extend.
       technologies:
-        - TypeScript
         - Python
+        - TypeScript
+        - Autonomous Vehicle
         - API Development
+        - Webhook Integration
+        - Testing and Documentation
         - CI/CD
         - Git
-    - period: "2023/6 - 2023/8"
-      position: "Software Engineer Intern @ NovBee (Hong Kong)"
-      description:
-        - "Developed new frontend features for the web application using React and TypeScript, enhancing user experience and functionality."
-        - "Defined and implemented page structure and layout using React components, ensuring a modular and maintainable codebase."
-        - "Collaborated closely with the UI/UX team to ensure design consistency"
+    - period: "06/2023 - 08/2023"
+      position: "Software Engineer Intern @ NovBee Limited (Hong Kong)"
+      logo: "https://media.licdn.com/dms/image/v2/D560BAQGKVykrpGCjxg/company-logo_100_100/company-logo_100_100/0/1687617641970/novbee_logo?e=1761177600&v=beta&t=1-FQ0X6NTUo1AS9BGGa68KOfoLO1p-4zv0jIM8KHNSQ"
+      logo_link: "https://www.novbee.co/"
+      description: |
+        Developed and deployed **30+ reusable React components with TypeScript**, improving code maintainability and accelerating feature development.
+        Implemented modular page structures and layouts, reducing frontend code duplication by **40%** and ensuring long-term scalability.
+        **Collaborated with the UI/UX team** to enforce design consistency, ensuring **95%** alignment with style guidelines and improving usability scores in student feedback surveys.
       technologies:
         - React
         - CSS
         - TypeScript
-        - Collaboration
-    - period: "2022/9 - 2024/7"
-      position: "Frontend Developer @ HKUST Path Advisor"
-      description:
-        - "Maintain and improve frontend code using JavaScript for an intuitive and user-friendly web interface."
-        - "Collaborate closely with the ITSC department to ensure seamless integration of features."
-        - "Edit and update campus maps using data received from ITSC, ensuring accuracy and relevancy."
+        - Collaboration and Communication
+    - period: "09/2022 - 07/2024"
+      position: "FrontEnd Developer | FrontEnd Team Leader @ HKUST Path Advisor"
+      logo: "https://media.licdn.com/dms/image/v2/C560BAQGhk4jCqa2KAA/company-logo_100_100/company-logo_100_100/0/1662557811469?e=1761177600&v=beta&t=Zog4uVa8-F_v5fsYoe_-g56WNzAtBXLtODiz2xW1K_A"
+      logo_link: "https://pathadvisor.ust.hk/floor/Overall/at/normalized/1550,919,3"
+      description: |
+        Project PI: Prof. Raymond Wong
+        Maintain and improve frontend code using JavaScript for an intuitive and user-friendly web interface.
+        Collaborate closely with the ITSC department to ensure seamless integration of features.
+        Edit and update campus maps using data received from Campus Management Office, ensuring accuracy and relevancy.
       technologies:
         - JavaScript
         - Frontend Development
-    - period: "2022/7 - 2022/8"
-      position: "Software Engineer Intern @ Wiadvance (Taiwan)"
-      description:
-        - "Researched and optimized customer service systems for a new cloud app release, enhancing user experience."
-        - "Debugged and improved internal website backend APIs for reliability and performance."
+    - period: "07/2022 - 08/2022"
+      position: "Software Engineer Intern @ Wiadvance Technology Co. (Taiwan)"
+      logo: "https://media.licdn.com/dms/image/v2/C560BAQGiPy3gxaSnnQ/company-logo_200_200/company-logo_200_200/0/1660637258408?e=2147483647&v=beta&t=X8AZ7XucpPgX6BD210nSW_3XdQphwDO5tjI1i9YW7aw"
+      logo_link: "https://www.wiadvance.com/"
+      description: | 
+        Researched and optimized customer service workflows for a new cloud app release, reducing average user query resolution time by **20%** and boosting customer satisfaction ratings.
+        Debugged and enhanced **backend APIs** for the internal website, increasing system reliability by ensuring data fetching correctness.
       technologies:
         - Python
         - API Development
-    - period: "2022/6 - 2023/7"
-      position: "Publicity Manager @ HKUST Taiwanese Students' Association"
-      description: ""
-      technologies:
-        - Public Relations
-        - Event Promotion
-        - Content Creation
-    - period: "2022/9 - 2024/1"
+    - period: "09/2022 - 01/2024"
       position: "UIUX Designer @ USThing"
-      description: ""
+      logo: "https://media.licdn.com/dms/image/v2/C560BAQEFVmE0YlozZA/company-logo_100_100/company-logo_100_100/0/1631321487640?e=1761177600&v=beta&t=ZWyPzvAh3XJxKcr2qNbvWHSSrNpmo5bjrkFSBcnDNlg"
+      logo_link: "https://usthing.xyz/"
+      description: |
+        Designed a team introduction page, introducing team responsibility to the public.
+        Created the USTools admin interface and login page, streamlining administrative workflows for future features.
       technologies:
         - UI/UX Design
         - User Research
         - Prototyping
-    - period: "2021/9 - 2023/6"
+    - period: "06/2022 - 07/2023"
+      position: "Publicity Manager @ HKUST Taiwanese Students' Association"
+      logo: "https://media.licdn.com/dms/image/v2/C560BAQEMQCgOLae1KQ/company-logo_100_100/company-logo_100_100/0/1658062078634/taiwanese_students_association_hkustsu_logo?e=1761177600&v=beta&t=6hbsqZNVVcjRb6t-azEkEElS6XSJlKjK5GdWPYm1vko"
+      logo_link: "https://www.instagram.com/hkustsu_tsa/"
+      description: |
+        Managed official cross-platform **social media** accounts, growing Instagram followers by **60%** (Experience camp account) and **30%** (Society main account) within one year, and reaching an audience of 1,000+ students.
+        Designed and Created Content for all social media platforms, driving a **40%** increase in average post engagement.
+        Designed marketing campaigns and event souvenirs that attracted **80+** participants across cultural events, strengthening the Taiwanese student community.
+        Authored the society's **first branding guideline**, providing a long-term framework that subsequent committees have adopted.
+      technologies:
+        - Public Relations
+        - Event Promotion
+        - Content Creation
+    - period: "09/2021 - 06/2023"
       position: "Marketing Team Member @ HKUST Be Our Guest"
-      description: ""
+      logo: "https://media.licdn.com/dms/image/v2/C510BAQGihR4z6wvUjQ/company-logo_100_100/company-logo_100_100/0/1630572383225?e=1761177600&v=beta&t=bDOcN2q3osUzLbFIep8njU7v4K_2jGoCS53oBftuuGM"
+      logo_link: "https://www.instagram.com/beourguesthkust/"
+      description: |
+        Organized 1 online and 3 in-person cultural exchange events at HKUST, engaging over **500** participants.
+        Designed compelling visual content using Adobe Illustrator and Final Cut Pro, consistently reaching over **700** accounts.
       technologies:
         - Marketing
         - Content Creation
         - Social Media Management
-
-LANGUAGES:
-  enabled: true
-  display_progress_bars: true
-  display_percentage_values: true
-  label: "Languages"
-  items:
-    - language: "Mandarin"
-      proficiency: "100%"
-    - language: "English"
-      proficiency: "80%"
-    - language: "Cantonese"
-      proficiency: "30%"
-    - language: "Korean"
-      proficiency: "30%"
-
-SKILLS:
-  enabled: false
-  display_progress_bars: true
-  display_percentage_values: true
-  label: "My Skills"
-  items:
-    - skill: ""
-      proficiency: ""
