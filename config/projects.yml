@@ -24,7 +24,7 @@ PROJECTS:
     
   - title: "Deepfake image classification"
     category: "AI & ML"
-    image: "src/images/comp4471.png"
+    image: "src/images/comp4471.jpg"
     url: ""
     report_url: ""
     detail: |
@@ -43,7 +43,7 @@ PROJECTS:
 
   - title: "Hong Kong Horse Racing Prediction"
     category: "AI & ML"
-    image: "src/images/comp4211_project.jpg"
+    image: "src/images/comp4211.jpg"
     url: ""
     report_url: ""
     detail: |
@@ -62,7 +62,7 @@ PROJECTS:
 
   - title: "Image Classification with Data Augmentation via AdaIN Style Transfer"
     category: "AI & ML"
-    image: "src/images/comp4211_pa2.jpg"
+    image: "src/images/comp4211pa2.jpg"
     url: ""
     report_url: ""
     detail: |
@@ -81,7 +81,7 @@ PROJECTS:
 
   - title: "Machine Learning Data Preprocessing Practice"
     category: "AI & ML"
-    image: "src/images/comp4211_pa1.jpg"
+    image: "src/images/comp4211pa1.jpg"
     url: ""
     report_url: ""
     detail: |
@@ -133,7 +133,7 @@ PROJECTS:
 
   - title: "MATLAB Portraiture Image Processing"
     category: "Computer Graphics & Image Processing"
-    image: "src/images/imageprocessing.jpg"
+    image: "src/images/rry025.jpg"
     url: ""
     report_url: ""
     detail: |
@@ -151,7 +151,7 @@ PROJECTS:
       
   - title: "Terrain Rendering with OpenGL"
     category: "Computer Graphics & Image Processing"
-    image: "src/images/computergraphic.jpg"
+    image: "src/images/tda362.jpg"
     url: ""
     report_url: ""
     detail: |
@@ -170,7 +170,7 @@ PROJECTS:
   
   - title: Tetris in MIPS Assembly
     category: "Others"
-    image: "src/images/comp2611.png"
+    image: "src/images/comp2611.jpg"
     url: ""
     report_url: ""
     detail: |
@@ -187,7 +187,7 @@ PROJECTS:
 
   - title: "Arduino Line-Following Car"
     category: "Others"
-    image: "src/images/elec1100.png"
+    image: "src/images/elec1100.jpg"
     url: ""
     report_url: ""
     detail: |
@@ -206,5 +206,5 @@ PROJECTS:
   
   - title: "Design Portfolio"
     category: "Art & Design"
-    image: "src/images/portfolio.png"
+    image: "src/images/portfolio.jpg"
     url: "https://www.canva.com/design/DAFLjrktb2I/7MmoxZCiRWeZVE61axh2rw/view?utm_content=DAFLjrktb2I&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h45418e1a61"
