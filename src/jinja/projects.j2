@@ -81,12 +81,55 @@
               alt="{{ item.title }}"
               class="modal-image">
           <div class="modal-detail">
-            {% set formatted_detail = item.detail 
-              | replace('Description:', '<span class="project-section-title">Description:</span>')
-              | replace('Key Technology & Contributions:', '<span class="project-section-title">Key Technology & Contributions:</span>')
-              | replace('Keywords:', '<span class="project-section-title">Keywords:</span>')
-              | replace('\n', '<br>') %}
-            {{ formatted_detail | safe }}
+            {% set sections = item.detail.split('\n\n') %}
+            {% for section in sections %}
+              {% if section.strip() %}
+                {% if section.startswith('Description:') %}
+                  <div class="project-section description-section">
+                    <h4 class="project-section-title">📋 Description</h4>
+                    <div class="project-section-content">
+                      {% set content = section.replace('Description:', '').strip() %}
+                      {% for part in content.split('**') %}
+                        {% if loop.index % 2 == 1 %}
+                          {{ part }}
+                        {% else %}
+                          <strong class="project-highlight">{{ part }}</strong>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% elif section.startswith('Key Technology & Contributions:') %}
+                  <div class="project-section tech-section">
+                    <h4 class="project-section-title">⚙️ Key Technology & Contributions</h4>
+                    <ul class="project-tech-list">
+                      {% set content = section.replace('Key Technology & Contributions:', '').strip() %}
+                      {% for line in content.split('\n') %}
+                        {% if line.strip() and line.strip().startswith('-') %}
+                          <li class="project-tech-item">
+                            {% set bullet_content = line.strip()[1:].strip() %}
+                            {% for part in bullet_content.split('**') %}
+                              {% if loop.index % 2 == 1 %}
+                                {{ part }}
+                              {% else %}
+                                <strong class="project-highlight">{{ part }}</strong>
+                              {% endif %}
+                            {% endfor %}
+                          </li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% elif section.startswith('Keywords:') %}
+                  <div class="project-section keywords-section">
+                    <h4 class="project-section-title">🏷️ Keywords</h4>
+                    <div class="project-keywords">
+                      {% set keywords = section.replace('Keywords:', '').strip() %}
+                      {{ keywords }}
+                    </div>
+                  </div>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
           </div>
           <div class="modal-actions">
             <a href="{{ item.url }}" target="_blank" class="btn">View on GitHub</a>

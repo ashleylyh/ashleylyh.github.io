@@ -16,12 +16,13 @@
     <ol class="timeline-list">
       {% for item in resume.EDUCATION["items"] | reverse %}
       <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">
-          {% if item.logo %}
-          <img src="{{item.logo}}" alt="School logo" class="position-logo">
-          {% endif %}
-          {{item.institution}}
-        </h4>
+        <div class="timeline-item-content">
+          <h4 class="h4 timeline-item-title">
+            {% if item.logo %}
+            <img src="{{item.logo}}" alt="School logo" class="position-logo">
+            {% endif %}
+            {{item.institution}}
+          </h4>
         <span>{{item.period}}</span>
         {% if item.description %}
         <div class="timeline-text">
@@ -40,7 +41,7 @@
         {% endif %}
         {% if item.coursework %}
         <div class="coursework">
-          <h5 class="coursework-title">Coursework</h5>
+          <h5 class="coursework-title">📚 Coursework</h5>
           <ul class="coursework-list">
             {% for course in item.coursework %}
             <li class="coursework-item">{{ course }}</li>
@@ -48,6 +49,7 @@
           </ul>
         </div>
         {% endif %}
+        </div>
       </li>
       {% endfor %}
     </ol>
@@ -66,18 +68,19 @@
     <ol class="timeline-list">
       {% for item in resume.EXPERIENCE["items"] %}
       <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">
-          {% if item.logo %}
-            {% if item.logo_link %}
-            <a href="{{item.logo_link}}" target="_blank" rel="noopener noreferrer" class="position-logo-link">
+        <div class="timeline-item-content">
+          <h4 class="h4 timeline-item-title">
+            {% if item.logo %}
+              {% if item.logo_link %}
+              <a href="{{item.logo_link}}" target="_blank" rel="noopener noreferrer" class="position-logo-link">
+                <img src="{{item.logo}}" alt="Company logo" class="position-logo">
+              </a>
+              {% else %}
               <img src="{{item.logo}}" alt="Company logo" class="position-logo">
-            </a>
-            {% else %}
-            <img src="{{item.logo}}" alt="Company logo" class="position-logo">
+              {% endif %}
             {% endif %}
-          {% endif %}
-          {{item.position}}
-        </h4>
+            {{item.position}}
+          </h4>
         <span>{{item.period}}</span>
         {% if item.description %}
         <ul class="experience-list">
@@ -113,10 +116,11 @@
         {% endif %}
         {% if item.technologies %}
         <p class="experience-tech">
-          <strong>Skills:</strong>
+          <strong>⚙️ Skills:</strong>
           {{ item.technologies | join(', ') }}
         </p>
         {% endif %}
+        </div>
       </li>
       {% endfor %}
     </ol>
@@ -135,11 +139,13 @@
     <ol class="timeline-list">
       {% for item in resume.AWARD["items"] | reverse %}
       <li class="timeline-item">
-        <h4 class="h4 timeline-item-title">{{ item.title }}</h4>
-        <span>{{ item.date }}</span>
-        {% if item.description %}
-        <p class="timeline-text">{{ item.description }}</p>
-        {% endif %}
+        <div class="timeline-item-content">
+          <h4 class="h4 timeline-item-title">{{ item.title }}</h4>
+          <span>{{ item.date }}</span>
+          {% if item.description %}
+          <p class="timeline-text">{{ item.description }}</p>
+          {% endif %}
+        </div>
       </li>
       {% endfor %}
     </ol>

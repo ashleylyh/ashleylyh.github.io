@@ -3,10 +3,10 @@ HEADER:
 
 PRESENTATION:
   description: |
-    I'm a Software Engineer from Taiwan, passionate about Computer Vision, Machine Learning, and Visual related Technologies. With solid experience in machine learning, software systems development, and full-stack web applications.
-    
-    I recently graduated from The Hong Kong University of Science and Technology with a BEng in Computer Engineering and a minor in Big Data Technology. 
-    Currently, I work as a Research Assistant at Academia Sinica in Institution of Statistics, where I contribute to cutting-edge research projects in Smart Health Project and AI-driven analytics.  
+    I'm a **Software Engineer** from Taiwan, passionate about **Computer Vision**, **Machine Learning**, **Signal Processing**, and Visual related Technologies. With solid experience in machine learning, software systems development, and **full-stack web applications**.
+
+    I recently graduated from **The Hong Kong University of Science and Technology** with a BEng in **Computer Engineering** and a minor in **Big Data Technology**.
+    Currently, I work as a **Research Assistant** at **Academia Sinica** in Institution of Statistics, where I contribute to cutting-edge research projects in **Smart Health Project** and **AI-driven Analysis**.
 
     Feel free to connect and get in touch with me :)
 
@@ -16,16 +16,19 @@ DOING:
   items:
     - title: "Computer Vision"
       icon: "tv"
-      description: "Developing real-time object detection and tracking systems with YOLO; researching Agentic AI for advanced medical image analysis."
+      description: "Developing real-time object detection and tracking systems with YOLO; Researching Agentic AI for advanced medical image analysis."
     - title: "Machine Learning"
       icon: "code-slash"
-      description: "Investigating state-of-the-art NLP and deep learning architectures—including transformer-based models—for practical applications."
-    - title: "Computer Architecture"
-      icon: "terminal"
-      description: "Optimizing GPU-accelerated parallel-compute frameworks and exploring hardware-software co-design for high-performance systems."
+      description: "Investigating state-of-the-art NLP and deep learning architectures, including transformer-based models for practical applications."
+    # - title: "Computer Architecture"
+    #   icon: "terminal"
+    #   description: "Optimizing GPU-accelerated parallel-compute frameworks and exploring hardware-software co-design for high-performance systems."
     # - title: "Computer Graphics"
     #   icon: "film"
     #   description: "Studying graphics pipelines at both software and hardware levels, from real-time shader development to GPU rendering optimization."
+    - title: "System Development"
+      icon: "cog"
+      description: "Building efficient and scalable software systems using Python and JavaScript, with a focus on performance optimization, data transmission and seamless integration."
     - title: "Web Development"
       icon: "globe"
       description: "Building full-stack web applications using modern frameworks like React, Node.js, and FastAPI for seamless user experiences."
@@ -74,6 +77,10 @@ TECHNOLOGIES:
           icon: "config/assets/icons/pytorch.svg"
         - title: "TensorFlow"
           icon: "config/assets/icons/tensorflow.svg"
+        - title: "OpenCV"
+          icon: "config/assets/icons/opencv.svg"
+        - title: "Supervision"
+          icon: "config/assets/icons/roboflow.svg"
         - title: "NumPy"
           icon: "config/assets/icons/numpy.svg"
         - title: "Pandas"
@@ -82,8 +89,6 @@ TECHNOLOGIES:
           icon: "config/assets/icons/python.svg"
         - title: "Hugging Face Transformers"
           icon: "config/assets/icons/huggingface.svg"
-        - title: "OpenCV"
-          icon: "config/assets/icons/opencv.svg"
         - title: "Matplotlib"
           icon: "config/assets/icons/matplotlib.svg"
         - title: "Seaborn"
@@ -165,9 +170,9 @@ CERTIFICATES:
   items:
     - title: "Hugging Face LLM"
       link: "https://cdn-uploads.huggingface.co/production/uploads/noauth/tEqA8uAEbMZnmd6Gycqyd.webp"
-    - title: "Hugging Face Agent"
-      link: "#"
+    - title: "Hugging Face AI Agent"
+      link: "https://cas-bridge.xethub.hf.co/xet-bridge-us/67a47037749ea2c4b9fafd4b/818a97fbd1b1ed9e1bc3819c3e906410ee8ececb28e2a714f847cb1cd52f987b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20250927%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250927T062455Z&X-Amz-Expires=3600&X-Amz-Signature=9711359f1cdbdfd9af24e207abcb7d5d94e49e58e31b937ddd8d26c70e4576fc&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%272025-09-18.png%3B+filename%3D%222025-09-18.png%22%3B&response-content-type=image%2Fpng&x-id=GetObject&Expires=1758957895&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1ODk1Nzg5NX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82N2E0NzAzNzc0OWVhMmM0YjlmYWZkNGIvODE4YTk3ZmJkMWIxZWQ5ZTFiYzM4MTljM2U5MDY0MTBlZThlY2VjYjI4ZTJhNzE0Zjg0N2NiMWNkNTJmOTg3YioifV19&Signature=eLjjo4gjFArmIlRVWZ-qsV7E4PjrXzTOr0dC6MhlVi%7EvAmdPHnhkFmXlCA7%7EYTjUj5%7E-2z-BwRxi-TGJu8EDAGT2Lt8sT05my34q2QGpyXd-CslG7KkT05x7Yx5n3tCSm8ffCpbmLZyRDzwMh3O%7E9230Rl0M0kOI%7EckqhKwxoc3YwSeJjSf497l3EgUBxfXBAOi7ZKsT-mnWfpyjTXhsSkaTO9DS0Ad544JqTF8XKZI2hZSJweuFoqQo0nJKI%7EZ9L8G4LsLtcN9MVpAHPBNqGd9hXAE7yKBO6dQukmI-wvShX7q88qNCc%7EgMwcX1%7EClPUI9t%7E3KhNRDSCpPYamDdIg__&Key-Pair-Id=K2L8F4GPSG1IFC"
     - title: "Statistics Course"
-      link: "#"
+      link: "https://coursera.org/share/6e370954ae0c8daa9178699be731b215"
     - title: "Algorithm Course"
       link: "#"

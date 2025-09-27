@@ -14,9 +14,7 @@ PROJECTS:
 
       Key Technology & Contributions:
       - Fine-tuned YOLOv11 with public available dataset and self-labeled dataset for robust vehicle detection under diverse traffic and weather conditions, improving detection performance in complex Hong Kong road scenarios.
-      
       - Integrated ByteTrack for precise multi-object tracking, enabling extraction of key traffic metrics (e.g. vehicle count, speed, flowrate, ...) with high tracking consistency.
-      
       - Developed a real-time dashboard with Streamlit, powered by FastAPI and Redis Database, to visualize live traffic data and trends for stakeholders.
 
       Keywords:
@@ -33,9 +31,7 @@ PROJECTS:
 
       Key Technology & Contributions:
       - Benchmarked CNN architectures (VGG16, ResNet50, MobileNet, EfficientNet), achieving up to 98% accuracy, with EfficientNet identified as the most effective.
-      
       - Evaluated Vision Transformers (ViT), achieving the highest recall (0.9917) compared to previous CNN-based models.
-      
       - Explored Error Level Analysis (ELA) with lightweight models, observing a 13% accuracy drop, highlighting the trade-off between model size and image preprocessing technique's effect on detection capability.
 
       Keywords:
@@ -52,9 +48,7 @@ PROJECTS:
 
       Key Technology & Contributions:
       - Conducted race-level features engineering (jockey/horse performance, track condition, race distance), improving the model’s ability to capture performance factors and enhance ranking precision.
-      
       - Implemented supervised regression models (Linear Regression, MLP, Random Forest), with the MLP achieving the highest top-4 prediction accuracy.
-      
       - Applied a Learning-to-Rank framework to transform MLP outputs into ordered race predictions, improving ranking consistency and enabling practical betting strategy simulations.
 
       Keywords:
@@ -71,9 +65,7 @@ PROJECTS:
 
       Key Technology & Contributions:
       - Implemented the AdaIN style transfer model to generate synthetic samples across diverse visual domains.
-      
       - Augmented the training dataset with generated data, achieving a 12% improvement in classification accuracy compared to the baseline.
-      
       - Validated the approach by demonstrating improved model generalization and reduced overfitting through generative augmentation.
 
       Keywords:
@@ -90,7 +82,6 @@ PROJECTS:
 
       Key Technology & Contributions:
       - Engineered features and optimized preprocessing pipelines, enhancing model robustness and reducing prediction error.
-      
       - Trained and tuned Linear/Logistic Regression and Feedforward Neural Networks, achieving over 85% classification accuracy after hyperparameter optimization.
 
       Keywords:
@@ -107,9 +98,7 @@ PROJECTS:
 
       Key Technology & Contributions:
       - Configured a single-node Kubernetes cluster with Minikube and deployed MobileNet via OpenFaaS, achieving real-time inference with ~200ms latency.
-      
       - Developed and containerized a Python Flask function to serve classification requests, enabling scalable, on-demand inference with dynamic resource allocation.
-      
       - Benchmarked serverless vs. server-based deployments, demonstrating lower maintenance overhead and identifying trade-offs in scalability, cost, and latency.
 
       Keywords:
@@ -125,7 +114,6 @@ PROJECTS:
 
       Key Technology & Contributions:
       - Integrated multi-sensor inputs (OV7725 camera, HX711 weight sensor, MPU6050 accelerometer, HC-SR04 ultrasonic) with STM32 to automate food dispensing and detect feeding activity.
-      
       - Developed a secondary STM32 board with NEO-6M GPS + LoRa, enabling real-time pet location tracking within a 10 km range.
 
       Keywords:
@@ -141,9 +129,7 @@ PROJECTS:
       
       Key Technology & Contributions:
       - Implemented preprocessing techniques (histogram equalization, sharpening, lowpass filtering) to improve subject contrast and reduce noise, yielding sharper facial details across all test images.
-      
       - Evaluated multiple edge detection methods (Laplacian filter, wavelet decomposition, binary thresholding), with binary thresholding delivering the highest segmentation accuracy and lowest noise in both simple and textured backgrounds.
-      
       - Applied black–white mask manipulation (imclose, imfill, bwareaopen) to remove noise clusters and reconstruct clean subject masks, producing portrait images with consistent subject isolation and realistic bokeh effects.
 
       Keywords:
@@ -160,9 +146,7 @@ PROJECTS:
 
       Key Technology & Contributions:
       - Generated and rendered a triangle mesh in a Vertex Array Object (VAO) with dynamic vertex displacement for real-time terrain deformation.
-      
       - Implemented vertex shader operations to sample heightfields, compute offsets, and derive normals, ensuring accurate lighting and shading across varied terrain features.
-      
       - Applied texture mapping with aerial photos, achieving enhanced visual fidelity and realism in terrain surfaces.
 
       Keywords:
@@ -179,7 +163,6 @@ PROJECTS:
 
       Key Technology & Contributions:
       - Implemented core Tetris mechanics (block movement, rotation, collision detection, and row clearing) in MIPS, ensuring 100% compliance with game rules while maintaining real-time responsiveness.
-      
       - Optimized the game loop and memory structures to handle a 10×23 grid, reducing invalid moves and improving block update efficiency.
 
       Keywords:
@@ -196,9 +179,7 @@ PROJECTS:
 
       Key Technology & Contributions:
       - Designed and integrated dual optical sensors and a bumper sensor with Arduino logic, enabling the car to detect track lines and obstacles.
-      
       - Optimized motor control through PWM tuning and H-bridge circuitry, balancing speed and precision to successfully navigate curves, 90° turns, and forked paths.
-      
       - Implemented real-time decision logic in Arduino C to handle branching paths, obstacle detection, and corrective movements, achieving successful runs during lab testing despite hardware failures.
 
       Keywords:

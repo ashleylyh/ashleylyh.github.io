@@ -5,7 +5,7 @@ EDUCATION:
   enabled: true
   label: "Education"
   items:
-    - period: "2015/8 - 2021/6"
+    - period: "08/2015 - 06/2021"
       institution: "National Experimental High School at Hsinchu Science Park (Taiwan)"
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQECpkyoc0EHfJd57W9w0iUzSBsPxcuOOclqg&s"
       description: |
@@ -13,7 +13,7 @@ EDUCATION:
         Financial manager of Dance society
         Lead Coordinator of Joint-Club Annual Performance
       coursework:
-    - period: "2023/8 - 2024/1"
+    - period: "08/2023 - 01/2024"
       institution: "Chalmers University of Technology (Sweden)"
       logo: "https://media.licdn.com/dms/image/v2/C4E0BAQFdK9pXmsNksw/company-logo_100_100/company-logo_100_100/0/1675779390326/chalmers_university_of_technology_logo?e=1761177600&v=beta&t=BVPB7xxBenGevO1xu5AzWXtM7LRA5Q9ADaEYwydSWcw"
       description: | 
@@ -24,12 +24,13 @@ EDUCATION:
         - "Computer Graphic"
         - "Image Processing"
         - "Algorithm"
-    - period: "2021/8 - 2025/7"
+    - period: "08/2021 - 07/2025"
       institution: "The Hong Kong University of Science and Technology (Hong Kong)"
       logo: "https://media.licdn.com/dms/image/v2/D560BAQEAi2tXX6yTVg/company-logo_100_100/B56ZWvKUEqHsAc-/0/1742400471801/hkust_logo?e=1761177600&v=beta&t=0RRqdvcxaUQktIOxuCYMgAOQkv223zNRoMo5OEA22VI"
       description: |
         BEng in Computer Engineering with a minor in Big Data Technology.
         Graduated with Second Class Honors, Division I  (Top 22%, Ranked 25th / 113)
+        Senior Year GPA: 3.66/4.3 | Cumulative GPA: 3.3/4.3
       coursework:
         - "Machine Learning"
         - "Deep Learning in Computer Vision"
@@ -37,7 +38,7 @@ EDUCATION:
         - "Parallel Programming"
         - "Computer Architecture"
         - "Operating Systems"
-        - "Cloud Computing and Big Data Systems"
+        - "Cloud Computing & Big Data Systems"
         - "Signal and System"
         - "Embedded System"
         - "Object-Oriented Programming"
@@ -54,6 +55,9 @@ AWARD:
     - title: "HKSAR Government Scholarship - Reaching Out Award"
       date: "2023"
       description: "HKUST Undergraduate Exchanged Scholarship."
+    - title: "Best Computer Engineering Final Year Project - Champion"
+      date: "2024-2025"
+      description: "Awarded for outstanding Final Year Project in Computer Engineering Major."
 
 EXPERIENCE:
   enabled: true
@@ -72,10 +76,10 @@ EXPERIENCE:
       logo_link: "https://pathadvisor.ust.hk/floor/Overall/at/normalized/1550,919,3"
       description: |
         Project PI: Prof. Raymond Wong
-        Progressed from frontend developer to project coordinator, **leading a 10+ member cross-functional team** to deliver new features and manage development cycles.
-        **Collaborated with HKUST departments** (Campus Management Office and ITSC) to integrate campus updates, ensuring map synchronization and accuracy.
-        Streamlined internal communication and workflows, reducing feature delivery time and improving team efficiency.
-        Resolved **20+ user-reported issues** and introduced UX enhancements, contributing to a **15% increase** in active student users.
+        Progressed from **frontend developer** to **project coordinator**, **leading a 10+ member cross-functional team** to deliver new features and manage development cycles.
+        **Collaborated with HKUST departments** (Campus Management Office and ITSC) to integrate campus updates, ensuring **map synchronization** and accuracy.
+        Streamlined **internal communication** and workflows, reducing **feature delivery time** and improving team efficiency.
+        Resolved **20+ user-reported issues** and introduced **UX enhancements**, contributing to a **15% increase** in active student users.
       technologies:
         - Leadership
         - Communication
@@ -86,10 +90,10 @@ EXPERIENCE:
       logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGq_1hReV7xAg/company-logo_100_100/company-logo_100_100/0/1644458028692/itri_logo?e=1761177600&v=beta&t=9ehiVkZWkXKehab1y6YTSrQehir-y-2orlOJK2nVdXg"
       logo_link: "https://www.itri.org.tw/eng"
       description:
-       - Developed APIs for retrieving scenario data (OpenSCENARIO) and runtime parameters from **MongoDB**, reducing query latency and improving internal data accessibility for simulation testing workflows across the AV.
-       - Developed **automated visualization pipeline** of simulation scenarios (schematic images & videos via esmini), cutting manual validation time and enabling faster scenario iteration for autonomous vehicle testing.
-       - Integrated webhooks into the scenario management system to synchronize correlated datasets, eliminating data inconsistencies and streamlining cross-team collaboration.
-       - Achieved over **95% coverage** for unit tests (Pytest) and documentation (JSDoc), ensuring early defect detection and improving developer efficiency by making the codebase easier to understand, maintain, and extend.
+       - Developed **APIs** for retrieving scenario data (**OpenSCENARIO**) and runtime parameters from **MongoDB**, reducing **query latency** and improving internal data accessibility for **simulation testing workflows** across the AV.
+       - Developed **automated visualization pipeline** of simulation scenarios (schematic images & videos via **esmini**), cutting **manual validation time** and enabling faster scenario iteration for **autonomous vehicle testing**.
+       - Integrated **webhooks** into the scenario management system to synchronize correlated datasets, eliminating **data inconsistencies** and streamlining **cross-team collaboration**.
+       - Achieved over **95% coverage** for **unit tests** (Pytest) and **documentation** (JSDoc), ensuring **early defect detection** and improving **developer efficiency** by making the codebase easier to understand, maintain, and extend.
       technologies:
         - Python
         - TypeScript
