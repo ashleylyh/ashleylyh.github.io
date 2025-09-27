@@ -2,6 +2,39 @@ HEADER:
   label: "Project"
 
 PROJECTS:
+  - title: Quick Draw Duel!
+    category: "AI & ML"
+    image: ""
+    url: ""
+    report_url: ""
+    detail: |
+      Description:
+      An AI-powered web game that challenges players to outdraw an AI opponent by sketching objects as quickly and accurately as possible, designed for 2025 Academia Sinica Open House event. 
+      The game leverage WebSocket, real-time pretrained CNN inference, a FastAPI + Redis backend, QRcode generate certificate delivery, education purposed feature map using UMAP for visualizations, and a live update Streamlit dashboard. 
+      Provide an engaging and interactive experience.
+
+      Key Technology & Contributions:
+      - Engineered a responsive multiplayer drawing game frontend with WebSocket integration, enabling real-time sketch input, CNN-based inference, live predicted probability updates, and instant certificate generation across multiple players.
+      - Developed a scalable Python FastAPI backend with Redis, supporting high-throughput real-time data transmission and storage/retrieval; Implemented QR code generation for on-demand certificate downloads and integrated UMAP dimensionality reduction to visualize player drawing clusters against training datasets.
+      - Created an interactive Streamlit dashboard with live statistical data visualization, dynamic player rankings, and real-time performance analytics, enhancing audience engagement during public screening.
+
+      Keywords:
+      Python, JavaScript, TensorFlow, Keras, CNN Inference, Redis, FastAPI, Streamlit, WebSocket, QRCode, Deployment, Realtime, UMAP dimentionality reduction
+  - title: "People Tracking and Counting for Statistical Analys"
+    category: "AI & ML"
+    image: ""
+    url: ""
+    report_url: ""
+    detail: |
+      Description:
+      A Computer Vision-powered people counting system to support Academia Sinica Open House people-flow estimation. The system combined YOLO-based detection, feature extraction with re-identification (ReID), and ByteTrack tracking to achieve stable and continuous multi-person tracking in crowded environments.
+
+      Key Technology & Contributions:
+      - Enhanced people detection and tracking in multi-angle occlusion scenario by fine-tuning YOLO on the CrowdHuman dataset (boosting dense-scene accuracy by 25%), training OSNet for ReID, and integrating ByteTrack with optimized buffer tuning, achieving more stable long-duration tracking and reducing ID-switch errors.
+      - Developed flexible zone/line setup tools with command-line and config integration, and implemented real-time ingress/egress analytics via bounding-box cross-product calculations, delivering >80% accuracy for current occupancy and cumulative unique counts in test runs.
+
+      Keywords:
+      Python, PyTorch, YOLO11, ByteTrack, Re-ID, OSNet, Computer Vision, Real-Time Analytics, People-flow Analysisision
   - title: "Developing an AI System for Smart Traffic: From Vehicle Detection to Data Analytics Dashboard"
     category: "AI & ML"
     image: "src/images/fyp.jpg"

@@ -131,10 +131,14 @@
               {% endif %}
             {% endfor %}
           </div>
-          <div class="modal-actions">
+            <div class="modal-actions">
+            {% if item.url %}
             <a href="{{ item.url }}" target="_blank" class="btn">View on GitHub</a>
+            {% endif %}
+            {% if item.report_url %}
             <a href="{{ item.report_url }}" target="_blank" class="btn">View Report</a>
-          </div>
+            {% endif %}
+            </div>
         </div>
       </div>
       {% endif %}

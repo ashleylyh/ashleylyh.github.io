@@ -16,10 +16,10 @@ DOING:
   items:
     - title: "Computer Vision"
       icon: "tv"
-      description: "Developing real-time object detection and tracking systems with YOLO; Researching Agentic AI for advanced medical image analysis."
+      description: "Developing real-time object detection and tracking systems with YOLO, related adaptation areas including Traffic Analysis and People Counting; Researching Agentic AI for advanced medical image analysis."
     - title: "Machine Learning"
       icon: "code-slash"
-      description: "Investigating state-of-the-art NLP and deep learning architectures, including transformer-based models for practical applications."
+      description: "Investigating state-of-the-art Agent AI, LLM and Deep Learning technology, including transformer-based and multi-media models for practical applications in Medical related AI and Autonomous Systems."
     # - title: "Computer Architecture"
     #   icon: "terminal"
     #   description: "Optimizing GPU-accelerated parallel-compute frameworks and exploring hardware-software co-design for high-performance systems."
@@ -28,10 +28,10 @@ DOING:
     #   description: "Studying graphics pipelines at both software and hardware levels, from real-time shader development to GPU rendering optimization."
     - title: "System Development"
       icon: "cog"
-      description: "Building efficient and scalable software systems using Python and JavaScript, with a focus on performance optimization, data transmission and seamless integration."
+      description: "Building efficient and scalable software systems using Python and JavaScript, with a focus on performance optimization, data transmission, seamless integration, and deployment."
     - title: "Web Development"
       icon: "globe"
-      description: "Building full-stack web applications using modern frameworks like React, Node.js, and FastAPI for seamless user experiences."
+      description: "Building full-stack web applications using modern frameworks like React, Node.js, FastAPI, and Redis database storage for seamless user experiences."
 
 SKILLS:
   enabled: true

@@ -12,6 +12,7 @@ EDUCATION:
         Graduated with GPA 4.0/4.3
         Financial manager of Dance society
         Lead Coordinator of Joint-Club Annual Performance
+        Nationawide Short Essay Competition - Hsinchu Division - A Place
       coursework:
     - period: "08/2023 - 01/2024"
       institution: "Chalmers University of Technology (Sweden)"
@@ -69,16 +70,23 @@ EXPERIENCE:
       logo_link: "https://www.stat.sinica.edu.tw/eng/index.php?"
       description: |
         Project PI: Prof. Hsin-Chou Yang
-      technologies:
+        Participated in research projects under **Smart Health and Precision Medicine**, **AI-driven Analysis** and support **AI-related** coding tasks, details can be found at Portfolio section.
+      technologies: 
+        - Machine Learning
+        - Medical Imaging
+        - Medical AI
+        - Computer Vision
+        - System Development
+        - Web Development
     - period: "08/2024 - 08/2025"
-      position: "Lead Project Coordinator @ HKUST Path Advisor (Hong Kong)"
+      position: "Lead Project Coordinator | FullStack Developer @ HKUST Path Advisor (Hong Kong)"
       logo: "https://media.licdn.com/dms/image/v2/C560BAQGhk4jCqa2KAA/company-logo_100_100/company-logo_100_100/0/1662557811469?e=1761177600&v=beta&t=Zog4uVa8-F_v5fsYoe_-g56WNzAtBXLtODiz2xW1K_A"
       logo_link: "https://pathadvisor.ust.hk/floor/Overall/at/normalized/1550,919,3"
       description: |
         Project PI: Prof. Raymond Wong
-        Progressed from **frontend developer** to **project coordinator**, **leading a 10+ member cross-functional team** to deliver new features and manage development cycles.
-        **Collaborated with HKUST departments** (Campus Management Office and ITSC) to integrate campus updates, ensuring **map synchronization** and accuracy.
-        Streamlined **internal communication** and workflows, reducing **feature delivery time** and improving team efficiency.
+        Progressed from **frontend developer**, to **frontend team leader**, finally to **project coordinator**; leading **10+ member cross-functional team** to deliver new features and manage development cycles.
+        **Collaborated with campus departments** (ITSC & Campus Management Office) to integrate campus map updates and resolve urgent issues, ensuring accurate map synchronization and seamless user experience.
+        Optimized internal communication and workflows, establishing documentation and **knowledge transfer practices** to shorten feature delivery time and improve team efficiency.
         Resolved **20+ user-reported issues** and introduced **UX enhancements**, contributing to a **15% increase** in active student users.
       technologies:
         - Leadership
@@ -89,11 +97,11 @@ EXPERIENCE:
       position: "Simulation Team Software Engineer Intern  @ ITRI, Autonomous Vehicle Lab (Hsinchu, Taiwan)"
       logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGq_1hReV7xAg/company-logo_100_100/company-logo_100_100/0/1644458028692/itri_logo?e=1761177600&v=beta&t=9ehiVkZWkXKehab1y6YTSrQehir-y-2orlOJK2nVdXg"
       logo_link: "https://www.itri.org.tw/eng"
-      description:
-       - Developed **APIs** for retrieving scenario data (**OpenSCENARIO**) and runtime parameters from **MongoDB**, reducing **query latency** and improving internal data accessibility for **simulation testing workflows** across the AV.
-       - Developed **automated visualization pipeline** of simulation scenarios (schematic images & videos via **esmini**), cutting **manual validation time** and enabling faster scenario iteration for **autonomous vehicle testing**.
-       - Integrated **webhooks** into the scenario management system to synchronize correlated datasets, eliminating **data inconsistencies** and streamlining **cross-team collaboration**.
-       - Achieved over **95% coverage** for **unit tests** (Pytest) and **documentation** (JSDoc), ensuring **early defect detection** and improving **developer efficiency** by making the codebase easier to understand, maintain, and extend.
+      description: |
+        Built a simulation scenario management platform (infrastructure + website) for **Autonomous Vehicle** control testing, using **FastAPI** to retrieve and process **OpenSCENARIO** data and runtime parameters from **MongoDB**; streamlining scenario setup, execution, monitoring, and improving data accessibility.
+        **Automated AV scenario testing** with **esmini** and delivered schematic images and video for visualization of testing results; cutting manual validation effort, reducing in-person testing risks, accelerating iteration speed, and providing intuitive result analysis.
+        Integrated **webhook-based synchronization** for correlated parameters and simulated outputs, eliminating data mismatches and enhancing user experience with a unified overview.
+        Achieved **95%+ unit test coverage** with **Pytest** and comprehensive documentation with **JSDoc**, enabling early defect detection and boosting developer efficiency by making the codebase easier to understand, maintain, and extend.
       technologies:
         - Python
         - TypeScript
@@ -117,13 +125,13 @@ EXPERIENCE:
         - TypeScript
         - Collaboration and Communication
     - period: "09/2022 - 07/2024"
-      position: "FrontEnd Developer | FrontEnd Team Leader @ HKUST Path Advisor"
+      position: "Frontend Developer | Frontend Team Leader @ HKUST Path Advisor"
       logo: "https://media.licdn.com/dms/image/v2/C560BAQGhk4jCqa2KAA/company-logo_100_100/company-logo_100_100/0/1662557811469?e=1761177600&v=beta&t=Zog4uVa8-F_v5fsYoe_-g56WNzAtBXLtODiz2xW1K_A"
       logo_link: "https://pathadvisor.ust.hk/floor/Overall/at/normalized/1550,919,3"
       description: |
         Project PI: Prof. Raymond Wong
-        Maintain and improve frontend code using JavaScript for an intuitive and user-friendly web interface.
-        Collaborate closely with the ITSC department to ensure seamless integration of features.
+        Maintain and improve **frontend code using JavaScript** for an intuitive and user-friendly web interface.
+        **Collaborate closely with the ITSC department** to ensure seamless integration of features.
         Edit and update campus maps using data received from Campus Management Office, ensuring accuracy and relevancy.
       technologies:
         - JavaScript
