@@ -4,7 +4,7 @@ HEADER:
 PROJECTS:
   - title: Quick Draw Duel!
     category: "AI & ML"
-    image: ""
+    image: "src/images/quickdraw.jpg"
     url: ""
     report_url: ""
     detail: |
@@ -22,7 +22,7 @@ PROJECTS:
       Python, JavaScript, TensorFlow, Keras, CNN Inference, Redis, FastAPI, Streamlit, WebSocket, QRCode, Deployment, Realtime, UMAP dimentionality reduction
   - title: "People Tracking and Counting for Statistical Analys"
     category: "AI & ML"
-    image: ""
+    image: "src/images/peoplecount.jpg"
     url: ""
     report_url: ""
     detail: |
