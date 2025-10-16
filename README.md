@@ -13,12 +13,12 @@ responsive for all devices, built using **`HTML`**, **`CSS`**, **`JavaScript`**,
 ![GitHub repo size](https://img.shields.io/github/repo-size/ivansaul/personal-portfolio)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![GitHub stars][github-stars]
-![GitHub forks][github-forks]
+<!-- ![GitHub stars][github-stars]
+![GitHub forks][github-forks] -->
 
-<a href="https://discord.gg/tDvybtJ7y9">
+<!-- <a href="https://discord.gg/tDvybtJ7y9">
     <img alt="Discord Server" height="50" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/social/discord-plural_vector.svg">
-</a>
+</a> -->
 
 </div>
 
@@ -106,32 +106,31 @@ Your personal portfolio will be built and updated automatically whenever any cha
 > [!NOTE]
 > If you like my work and want to show some ❤️, please consider giving a ⭐️ to this Repository.
 
-## Screenshots
+<!-- ## Screenshots
 
 ![Desktop Demo][desktop-screenshot]
-![Mobile Demo][mobile-screenshot]
+![Mobile Demo][mobile-screenshot] -->
 
-## Contribute
+<!-- ## Contribute
 
-Contributions are welcome.
+Contributions are welcome. -->
 
-## Facing any Issue?
+<!-- ## Facing any Issue?
 
-Feel free to open an [Issue][issue] :)
+Feel free to open an [Issue][issue] :) -->
 
-## Contact
+<!-- ## Contact
 
-If you want to contact me you can reach me at [Discord][discord].
+If you want to contact me you can reach me at [Discord][discord]. -->
 
 ## Credits
+This is an enhancement and customization of [DevFolio][devfolio] by [ivansaul](https://github.com/ivansaul). While it is based on [vcard portfolio][vcard], the main focus of this project is adding new features and make it accessible to everyone.
 
-This project is based on [vcard portfolio][vcard]. The main focus of this project is adding new features and make it accessible to everyone.
+<!-- ## License
 
-## License
+MIT -->
 
-MIT
-
-[vcard]: https://github.com/codewithsadee/vcard-personal-portfolio
+<!-- [vcard]: https://github.com/codewithsadee/vcard-personal-portfolio
 [devfolio]: https://ivansaul.github.io/personal-portfolio
 [demo]: https://raw.githubusercontent.com/ivansaul/demos/master/python/personal-portfolio-demo.gif
 [discord]: https://discord.com/users/744755977684779038
@@ -140,17 +139,16 @@ MIT
 [github-forks]: https://img.shields.io/github/forks/ivansaul/personal-portfolio?style=social
 [desktop-screenshot]: https://i.imgur.com/xKkMSwR.png
 [mobile-screenshot]: https://i.imgur.com/G1A1nBu.png
-[imgur]: https://imgur.com
+[imgur]: https://imgur.com -->
 
 
 ## Notes
-icon: https://techicons.dev/icons
+- Technical Icon: https://techicons.dev/icons
 
-if you want to change the color scheme, go to `src/css/style.css` and replace the `--bg-gradient-main-1`, `--text-gradient-main`, `--main-1`, and `--main-2` variables with your desired colors.
+- If you want to change the color scheme, go to `src/css/style.css` and replace the `--bg-gradient-main-1`, `--text-gradient-main`, `--main-1`, and `--main-2` variables with your desired colors.
 
-you can build the page locally by running the following command:
-
+You can build the page locally by running the following command:
 ```bash
 python main.py
 ``` 
-This will generate the `index.html` file in the root folder, which you can open in your browser to see the changes.
+This will generate and update the `index.html` file in the root folder, which you can open in your browser to see the changes.
