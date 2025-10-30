@@ -7,7 +7,7 @@ EDUCATION:
   items:
     - period: "08/2015 - 06/2021"
       institution: "National Experimental High School at Hsinchu Science Park (Taiwan)"
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQECpkyoc0EHfJd57W9w0iUzSBsPxcuOOclqg&s"
+      logo: "./config/assets/icons/nehs.png"
       description: |
         Graduated with GPA 4.0/4.3
         Financial manager of Dance society
@@ -16,7 +16,7 @@ EDUCATION:
       coursework:
     - period: "08/2023 - 01/2024"
       institution: "Chalmers University of Technology (Sweden)"
-      logo: "https://media.licdn.com/dms/image/v2/C4E0BAQFdK9pXmsNksw/company-logo_100_100/company-logo_100_100/0/1675779390326/chalmers_university_of_technology_logo?e=1761177600&v=beta&t=BVPB7xxBenGevO1xu5AzWXtM7LRA5Q9ADaEYwydSWcw"
+      logo: "./config/assets/icons/chalmers.jpeg"
       description: | 
         School Nominated Exchange Study in Master Level Courses
         Focusing on advanced computer science courses and cultural experiences
@@ -27,7 +27,7 @@ EDUCATION:
         - "Algorithm"
     - period: "08/2021 - 07/2025"
       institution: "The Hong Kong University of Science and Technology (Hong Kong)"
-      logo: "https://media.licdn.com/dms/image/v2/D560BAQEAi2tXX6yTVg/company-logo_100_100/B56ZWvKUEqHsAc-/0/1742400471801/hkust_logo?e=1761177600&v=beta&t=0RRqdvcxaUQktIOxuCYMgAOQkv223zNRoMo5OEA22VI"
+      logo: "./config/assets/icons/hkust.png"
       description: |
         BEng in Computer Engineering with a minor in Big Data Technology.
         Graduated with Second Class Honors, Division I  (Top 22%, Ranked 25th / 113)
@@ -66,7 +66,7 @@ EXPERIENCE:
   items:
     - period: "07/2025 - Present"
       position: "Research Assistant @ Academia Sinica, Institute of Statistical Science (Taipei, Taiwan)"
-      logo: "https://d5cdve4ckngvw.cloudfront.net/math_web/assets/sinica_logo-5e6d7a947eb553dd725908e6f4243f9f509288820ccdcaee36f1176c112e65f1.png"
+      logo: "./config/assets/icons/sinica.png"
       logo_link: "https://www.stat.sinica.edu.tw/eng/index.php?"
       description: |
         Project PI: Prof. Hsin-Chou Yang
@@ -80,7 +80,7 @@ EXPERIENCE:
         - Web Development
     - period: "08/2024 - 08/2025"
       position: "Lead Project Coordinator | FullStack Developer @ HKUST Path Advisor (Hong Kong)"
-      logo: "https://media.licdn.com/dms/image/v2/C560BAQGhk4jCqa2KAA/company-logo_100_100/company-logo_100_100/0/1662557811469?e=1761177600&v=beta&t=Zog4uVa8-F_v5fsYoe_-g56WNzAtBXLtODiz2xW1K_A"
+      logo: "./config/assets/icons/PathAdvisor.jpeg"
       logo_link: "https://pathadvisor.ust.hk/floor/Overall/at/normalized/1550,919,3"
       description: |
         Project PI: Prof. Raymond Wong
@@ -95,7 +95,7 @@ EXPERIENCE:
         - Full Stack Development
     - period: "06/2024 - 08/2024"
       position: "Simulation Team Software Engineer Intern  @ ITRI, Autonomous Vehicle Lab (Hsinchu, Taiwan)"
-      logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGq_1hReV7xAg/company-logo_100_100/company-logo_100_100/0/1644458028692/itri_logo?e=1761177600&v=beta&t=9ehiVkZWkXKehab1y6YTSrQehir-y-2orlOJK2nVdXg"
+      logo: "./config/assets/icons/itri.png"
       logo_link: "https://www.itri.org.tw/eng"
       description: |
         Built a simulation scenario management platform (infrastructure + website) for **Autonomous Vehicle** control testing, using **FastAPI** to retrieve and process **OpenSCENARIO** data and runtime parameters from **MongoDB**; streamlining scenario setup, execution, monitoring, and improving data accessibility.
@@ -113,7 +113,7 @@ EXPERIENCE:
         - Git
     - period: "06/2023 - 08/2023"
       position: "Software Engineer Intern @ NovBee Limited (Hong Kong)"
-      logo: "https://media.licdn.com/dms/image/v2/D560BAQGKVykrpGCjxg/company-logo_100_100/company-logo_100_100/0/1687617641970/novbee_logo?e=1761177600&v=beta&t=1-FQ0X6NTUo1AS9BGGa68KOfoLO1p-4zv0jIM8KHNSQ"
+      logo: "./config/assets/icons/novbee.jpeg"
       logo_link: "https://www.novbee.co/"
       description: |
         Developed and deployed **30+ reusable React components with TypeScript**, improving code maintainability and accelerating feature development.
@@ -126,7 +126,7 @@ EXPERIENCE:
         - Collaboration and Communication
     - period: "09/2022 - 07/2024"
       position: "Frontend Developer | Frontend Team Leader @ HKUST Path Advisor"
-      logo: "https://media.licdn.com/dms/image/v2/C560BAQGhk4jCqa2KAA/company-logo_100_100/company-logo_100_100/0/1662557811469?e=1761177600&v=beta&t=Zog4uVa8-F_v5fsYoe_-g56WNzAtBXLtODiz2xW1K_A"
+      logo: "./config/assets/icons/PathAdvisor.jpeg"
       logo_link: "https://pathadvisor.ust.hk/floor/Overall/at/normalized/1550,919,3"
       description: |
         Project PI: Prof. Raymond Wong
@@ -138,7 +138,7 @@ EXPERIENCE:
         - Frontend Development
     - period: "07/2022 - 08/2022"
       position: "Software Engineer Intern @ Wiadvance Technology Co. (Taiwan)"
-      logo: "https://media.licdn.com/dms/image/v2/C560BAQGiPy3gxaSnnQ/company-logo_200_200/company-logo_200_200/0/1660637258408?e=2147483647&v=beta&t=X8AZ7XucpPgX6BD210nSW_3XdQphwDO5tjI1i9YW7aw"
+      logo: "./config/assets/icons/wiadvance.png"
       logo_link: "https://www.wiadvance.com/"
       description: | 
         Researched and optimized customer service workflows for a new cloud app release, reducing average user query resolution time by **20%** and boosting customer satisfaction ratings.
@@ -148,7 +148,7 @@ EXPERIENCE:
         - API Development
     - period: "09/2022 - 01/2024"
       position: "UIUX Designer @ USThing"
-      logo: "https://media.licdn.com/dms/image/v2/C560BAQEFVmE0YlozZA/company-logo_100_100/company-logo_100_100/0/1631321487640?e=1761177600&v=beta&t=ZWyPzvAh3XJxKcr2qNbvWHSSrNpmo5bjrkFSBcnDNlg"
+      logo: "./config/assets/icons/usthing.png"
       logo_link: "https://usthing.xyz/"
       description: |
         Designed a team introduction page, introducing team responsibility to the public.
@@ -159,7 +159,7 @@ EXPERIENCE:
         - Prototyping
     - period: "06/2022 - 07/2023"
       position: "Publicity Manager @ HKUST Taiwanese Students' Association"
-      logo: "https://media.licdn.com/dms/image/v2/C560BAQEMQCgOLae1KQ/company-logo_100_100/company-logo_100_100/0/1658062078634/taiwanese_students_association_hkustsu_logo?e=1761177600&v=beta&t=6hbsqZNVVcjRb6t-azEkEElS6XSJlKjK5GdWPYm1vko"
+      logo: "./config/assets/icons/tsa.png"
       logo_link: "https://www.instagram.com/hkustsu_tsa/"
       description: |
         Managed official cross-platform **social media** accounts, growing Instagram followers by **60%** (Experience camp account) and **30%** (Society main account) within one year, and reaching an audience of 1,000+ students.
@@ -172,7 +172,7 @@ EXPERIENCE:
         - Content Creation
     - period: "09/2021 - 06/2023"
       position: "Marketing Team Member @ HKUST Be Our Guest"
-      logo: "https://media.licdn.com/dms/image/v2/C510BAQGihR4z6wvUjQ/company-logo_100_100/company-logo_100_100/0/1630572383225?e=1761177600&v=beta&t=bDOcN2q3osUzLbFIep8njU7v4K_2jGoCS53oBftuuGM"
+      logo: "./config/assets/icons/bog.jpeg"
       logo_link: "https://www.instagram.com/beourguesthkust/"
       description: |
         Organized 1 online and 3 in-person cultural exchange events at HKUST, engaging over **500** participants.
