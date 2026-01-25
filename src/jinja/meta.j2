@@ -21,3 +21,13 @@
 <meta name="twitter:image:height" content="200">
 <meta name="keywords" content="{{profile.USER.name}}, {% for section in about.TECHNOLOGIES['sections'] %}{% for item in section['items'] %}{{item.title}}{% if not loop.last %}, {% endif %}{% endfor %}{% if not loop.last %}, {% endif %}{% endfor %}" />
 <link href="https://{{profile.USER.username}}.github.io" rel="canonical">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2DGSYVJ7BS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2DGSYVJ7BS');
+</script>
