@@ -1,154 +1,289 @@
-<!-- markdownlint-disable MD033 MD036 MD041 MD045 MD046 -->
-<div align="center">
+# Astrofy | Personal Portfolio Website Template
 
-<h1 style="border-bottom: none">
-    <b><a href="https://ivansaul.github.io/personal-portfolio">Personal Portfolio - Developer</a></b>
-</h1>
+![Astrofy | Personal Porfolio Website Template](public/social_img.webp)
 
-**`Personal Portfolio`** is a fully responsive personal developer portfolio single-page website, <br/>
-responsive for all devices, built using **`HTML`**, **`CSS`**, **`JavaScript`**, and **`Python`**.
+Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with a Blog, CV, Project Section, Store, and RSS Feed.
 
-![Made-with-python](https://img.shields.io/badge/Made%20with-Python-orange)
-[![Deploy](https://github.com/ivansaul/personal-portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/ivansaul/personal-portfolio/actions/workflows/deploy.yml)
-![GitHub repo size](https://img.shields.io/github/repo-size/ivansaul/personal-portfolio)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Demo
 
-<!-- ![GitHub stars][github-stars]
-![GitHub forks][github-forks] -->
+View a live demo of [Astrofy](https://astrofy-template.netlify.app/)
 
-<!-- <a href="https://discord.gg/tDvybtJ7y9">
-    <img alt="Discord Server" height="50" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/social/discord-plural_vector.svg">
-</a> -->
+## Installation
 
+Run the following command in your terminal
+
+```bash
+pnpm install
+```
+
+Once the packages are installed you are ready to run astro. Astro comes with a built-in development server that has everything you need for project development. The astro dev command will start the local development server so that you can see your new website in action for the very first time.
+
+```bash
+pnpm run dev
+```
+
+## Tech Stack
+
+- [Astro](https://astro.build)
+- [tailwindcss](https://tailwindcss.com/)
+- [DaisyUI](https://daisyui.com/)
+
+## Project Structure
+
+```php
+├── src/
+│   ├── components/
+│   │   ├── cv/
+│   │   │   ├── TimeLine
+│   │   ├── BaseHead.astro
+│   │   ├── Card.astro
+│   │   ├── Footer.astro
+│   │   ├── Header.astro
+│   │   └── HorizontalCard.astro
+│   │   └── SideBar.astro
+│   │   └── SideBarMenu.astro
+│   │   └── SideBarFooter.astro
+│   ├── content/
+│   │   ├── blog/
+│   │   │   ├── post1.md
+│   │   │   ├── post2.md
+│   │   │   └── post3.md
+│   │   ├── store/
+│   │   │   ├── item1.md
+│   │   │   ├── item2.md
+│   ├── layouts/
+│   │   └── BaseLayout.astro
+│   │   └── PostLayout.astro
+│   └── pages/
+│   │   ├── blog/
+│   │   │   ├── [...page].astro
+│   │   │   ├── [slug].astro
+│   │   └── cv.astro
+│   │   └── index.astro
+│   │   └── projects.astro
+│   │   └── rss.xml.js
+│   ├── styles/
+│   │   └── global.css
+│   └── config.ts
+├── public/
+│   ├── favicon.svg
+│   └── profile.webp
+│   └── social_img.webp
+├── astro.config.mjs
+├── tailwind.config.cjs
+├── package.json
+└── tsconfig.json
+```
+
+### Site config
+
+You can change global site configuration on '/src/config.ts' file:
+
+- **SITE_TITLE**: Default pages title.
+- **SITE_DESCRIPTION**: Default pages title.
+- **GENERATE_SLUG_FROM_TITLE**: By default Astrofy will generate the blog slug pages base on the article name. Set this var to false if you want to use the Astro file base (Compatible with Astrofy older versions).
+- **TRANSITION_API**: Enable and disable transition API
+
+### Components usage
+
+#### Layout Components
+
+The `BaseHead`, `Footer`, `Header`, and `SideBar` components are already included in the layout system. To change the website content you can edit the content of these components.
+
+##### SideBar
+
+In the Sidebar you can change your profilePicture, links to all your website pages, and your social icons.
+
+You can change your avatar shape using [mask classes](https://daisyui.com/components/mask/).
+
+The used social-icons are SVG form [BoxIcons](https://boxicons.com/) pack. You can replace the icons in the `SideBarFooter` component
+
+To add a new page in the sidebar go to the `SideBarMenu` component.
+
+```
+<li><a class="py-3 text-base" id="home" href="/">Home</a></li>
+
+```
+
+**Note**: In order to change the sidebar menu's active item, you need to setup the prop `sideBarActiveItemID` in the `BaseLayout` component of your new page and add that id to the link in the `SideBarMenu`
+
+#### TimeLine
+
+The timeline components are used to confirm the CV.
+
+```html
+<div class="time-line-container">
+  <TimeLineElement title="Element Title" subtitle="Subtitle">
+    Content that can contain
+    <div>divs</div>
+    and <span>anything else you want</span>.
+  </TimeLineElement>
+  ...
 </div>
+```
 
+#### Card & HorizontalCard
+
+The cards are primarly used for the Project and the Blog components. They include a picture, a title, and a description. 
+
+```html
+<HorizontalCard title="Card Title" img="imge_url" desc="Description" url="Link
+URL" target="Optional link target (_blank default)" badge="Optional badge"
+tags={['Array','of','tags']} />
+```
+
+#### HorizontalCard Shop Item
+
+
+This component is already included in the Store layout of the template. In case you want to use it in another place these are the props.
+
+```html
+<HorizontalShopItem
+  title="Item Title"
+  img="imge_url"
+  desc="Item description"
+  pricing="current_price"
+  oldPricing="old_price"
+  checkoutUrl="external store checkout url"
+  badge="Optional badge"
+  url="item details url"
+  custom_link="Custom link url"
+  custom_link_label="Cutom link btn label"
+  target="Optional link target (_self default)"
+/>
+```
+
+#### Adding a Custom Component
+
+To add a custom component, you can create a .astro file in the components folder under the source folder. 
+
+Components must follow this template. The ```---``` represents the code fence and uses Javascript and can be used for imports. 
+
+The HTML component is the actual style of your new component. 
+
+```html
 ---
-
-<div align="center">
-
-![Demo][demo]
-**`Live Demo:`** 👉🏽 [personal-portfolio.github.io][devfolio]
-
-</div>
-
-## **How to make it yours?**
-
-### Step 1
-
-Fork this project and rename the repo to `your_github_username.github.io`.
-
-> [!IMPORTANT]
-> For example, if your GitHub username is `ivansaul`. Rename the repository to `ivansaul.github.io`
-
-### Step 2
-
-Enable GitHub Pages on:
-
-`Repository(Settings) > Pages > Build and deployment > Source(GitHub Actions)`
-
-### Step 3
-
-Enable workflows:
-
-`Repository(Actions) > I understand my workflows, go ahead and enable them`
-
-### Step 4
-
-Go to the `config/` folder and replace the default data with your personal information.
-
-```bash
-config
-|-- assets
-|   |-- avatars
-|   |-- icons
-|   |-- posts
-|   |-- projects
-├── blog.yml
-├── contact.yml
-├── navbar.yml
-├── profile.yml
-├── projects.yml
-└── resume.yml
+// Component Script (JavaScript)
+---
+<!-- Component Template (HTML + JS Expressions) -->
 ```
 
-For example, to set your contact information, edit `config/profile.yml`.
+For more details, see the [astro components](https://docs.astro.build/en/core-concepts/astro-components/) documentation here. 
 
-```yml
-INFO:
-  - label: "Email"
-    value: "richard@example.com"
-  - label: "Phone"
-    value: "+1 (213) 352-2795"
-  - label: "Birthday"
-    value: "June 26, 1996"
-  - label: "Location"
-    value: "Sacramento, California, USA"
+### Layouts
+
+Include `BaseLayout` in each page you add and `PostLayout` to your post pages.
+
+The BaseLayout defines a general template for each new webpage you want to add. It imports constants SITE_TITLE and SITE_DESCRIPTION which can be modified in the ```../config``` folder. Data placed there can be imported anywhere using import. 
+
+### Content
+
+You can add a [content collection](https://docs.astro.build/en/guides/content-collections/) in `/content/' folder, you will need add it at config.ts.
+
+#### config.ts
+
+Where you need to define your content collections, we define our content schemas too.
+
+#### Blog
+
+Add your `md` blog post in the `/content/blog/` folder.
+
+##### Post format
+
+Add code with this format in the top of each post file.
+
+```
+---
+title: "Post Title"
+description: "Description"
+pubDate: "Post date format(Sep 10 2022)"
+heroImage: "Post Hero Image URL"
+---
 ```
 
-> [!IMPORTANT]
-> Indentation Matters: YAML is sensitive to indentation. Ensure that each level of nesting is indented with consistent spaces (not tabs) to avoid errors when loading or parsing the data.
+### Pages
 
-<br/>
+#### Blog
 
-> [!TIP]
-> You can upload your images directly to the `config/assets` folder or use an image server like [Imgur][imgur]. Both options are valid for customizing your portfolio. For example:
->
-> `avatar = "https://i.imgur.com/H5gx7JF.png"`
->
-> `avatar = "config/assets/avatars/my-avatar.png"`
+Blog uses Astro's content collection to query post's `md`.
 
-### Step 5: Enjoy 😉
+##### [page].astro
 
-Now you can visit your portfolio at `https://your_github_username.github.io`
+The `[page].astro` is the route to work with the paginated post list. You can change there the number of items listed for each page and the pagination button labels.
 
-Your personal portfolio will be built and updated automatically whenever any changes occur in the configuration files.
+##### [slug].astro
 
-> [!NOTE]
-> If you like my work and want to show some ❤️, please consider giving a ⭐️ to this Repository.
+The `[slug].astro` is the base route for every blog post, you can customize the page layout or behaviour, by default uses `content/blog` for content collection and `PostLayout` as layout.
 
-<!-- ## Screenshots
+#### Shop
 
-![Desktop Demo][desktop-screenshot]
-![Mobile Demo][mobile-screenshot] -->
+Add your `md` item in the `/pages/shop/` folder.
 
-<!-- ## Contribute
+##### [page].astro
 
-Contributions are welcome. -->
+The `[page].astro` is the route to work with the paginated item list. You can change there the number of items listed for each page and the pagination button labels. The shop will render all `.md` files you include inside this folder.
 
-<!-- ## Facing any Issue?
+##### Item format
 
-Feel free to open an [Issue][issue] :) -->
+Add code with this format at the top of each item file.
 
-<!-- ## Contact
+```js
+---
+title: "Demo Item 1"
+description: "Item description"
+heroImage: "Item img url"
+details: true // show or hide details btn
+custom_link_label: "Custom btn link label"
+custom_link: "Custom btn link"
+pubDate: "Sep 15 2022"
+pricing: "$15"
+oldPricing: "$25.5"
+badge: "Featured"
+checkoutUrl: "https://checkouturl.com/"
+---
+```
 
-If you want to contact me you can reach me at [Discord][discord]. -->
+#### Static pages
 
-## Credits
-This is an enhancement and customization of [DevFolio][devfolio] by [ivansaul](https://github.com/ivansaul). While it is based on [vcard portfolio][vcard], the main focus of this project is adding new features and make it accessible to everyone.
+The other pages included in the template are static pages. The `index` page belongs to the root page. You can add your pages directly in the `/pages` folder and then add a link to those pages in the `sidebar` component.
 
-<!-- ## License
+Feel free to modify the content included in the pages that the template contains or add the ones you need.
 
-MIT -->
+### Theming
 
-<!-- [vcard]: https://github.com/codewithsadee/vcard-personal-portfolio
-[devfolio]: https://ivansaul.github.io/personal-portfolio
-[demo]: https://raw.githubusercontent.com/ivansaul/demos/master/python/personal-portfolio-demo.gif
-[discord]: https://discord.com/users/744755977684779038
-[issue]: https://github.com/ivansaul/personal-portfolio/issues
-[github-stars]: https://img.shields.io/github/stars/ivansaul/personal-portfolio?style=social
-[github-forks]: https://img.shields.io/github/forks/ivansaul/personal-portfolio?style=social
-[desktop-screenshot]: https://i.imgur.com/xKkMSwR.png
-[mobile-screenshot]: https://i.imgur.com/G1A1nBu.png
-[imgur]: https://imgur.com -->
+To change the template theme change the `data-theme` attribute of the `<html>` tag in `BaseLayout.astro` file.
 
+You can choose among 30 themes available or create your custom theme. See themes available [here](https://daisyui.com/docs/themes/).
 
-## Notes
-- Technical Icon: https://techicons.dev/icons
+## Sitemap
 
-- If you want to change the color scheme, go to `src/css/style.css` and replace the `--bg-gradient-main-1`, `--text-gradient-main`, `--main-1`, and `--main-2` variables with your desired colors.
+The Sitemap is generated automatically when you build your website in the root of the domain. Please update the `robots.txt` file in the public folder with your site name URL for the Sitemap.
 
-You can build the page locally by running the following command:
-```bash
-python main.py
-``` 
-This will generate and update the `index.html` file in the root folder, which you can open in your browser to see the changes.
+## Deploy
+
+You can deploy your site on your favourite static hosting service such as Vercel, Netlify, GitHub Pages, etc.
+
+The configuration for the deployment varies depending on the platform where you are going to do it. See the [official Astro information](https://docs.astro.build/en/guides/deploy/) to deploy your website.
+
+> **⚠️ CAUTION** </br>
+> The Blog pagination of this template is implemented using dynamic route parameters in its filename and for now this format is incompatible with SSR deploy configs, so please use the default static deploy options for your deployments.
+
+## Contributing
+
+Suggestions and pull requests are welcomed! Feel free to open a discussion or an issue for a new feature request or bug.
+
+One of the best ways to contribute is to grab a [bug report or feature suggestion](https://github.com/manuelernestog/astrofy/issues) that has been marked `accepted` and dig in.
+
+Please be wary of working on issues _not_ marked as `accepted`. Just because someone has created an issue doesn't mean we'll accept a pull request for it.
+
+## License
+
+Astrofy is licensed under the MIT license — see the [LICENSE](https://github.com/manuelernestog/astrofy/blob/main/LICENSE) file for details.
+
+## Contributors
+
+<a href="https://github.com/manuelernestog/astrofy/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=manuelernestog/astrofy" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
