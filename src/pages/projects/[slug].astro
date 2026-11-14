@@ -1,0 +1,37 @@
+---
+import PostLayout from "../../layouts/PostLayout.astro";
+import { getProjects, projectUrl, type Project } from "../../lib/projects";
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((entry) => ({
+    params: { slug: projectUrl(entry).split("/").pop() },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props as { entry: Project };
+const project = entry.data;
+const { Content } = await entry.render();
+---
+
+<PostLayout
+  title={project.title}
+  description={project.description}
+  pubDate={project.pubDate}
+  heroImage={project.heroImage}
+  badge={project.badge}
+  award={project.award}
+  tags={project.tags}
+  tagBase="/projects/tag"
+>
+  {
+    (project.link || project.report) && (
+      <div class="not-prose flex gap-2 mb-6">
+        {project.link && <a class="btn btn-outline btn-sm" href={project.link} target="_blank">View project</a>}
+        {project.report && <a class="btn btn-outline btn-sm" href={project.report} target="_blank">Read report</a>}
+      </div>
+    )
+  }
+  <Content />
+</PostLayout>

@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+import { getCollection } from "astro:content";
+import { dateLine, withBodies } from "../lib/timeline";
+
+// Content lives in src/content/experience/*.md — one file per role.
+// `section: activity` puts a role under "Leadership & Activities"; everything else is "Experience".
+const experience = await withBodies(await getCollection("experience"));
+const experienceSections: [string, typeof experience][] = [
+  ["Experience", experience.filter((e) => e.data.section === "work")],
+  ["Leadership & Activities", experience.filter((e) => e.data.section === "activity")],
+];
+---
+
+<BaseLayout title="Experience" sideBarActiveItemID="experience">
+  {
+    experienceSections.map(([heading, entries]) =>
+      entries.length > 0 && (
+        <>
+          <div class="mb-5">
+            <div class="text-3xl w-full font-bold">{heading}</div>
+          </div>
+
+          <div class="time-line-container mb-10">
+            {entries.map(({ data, Body }) => (
+              <TimeLineElement
+                title={data.title}
+                lines={[data.organization]}
+                pi={data.pi}
+                piUrl={data.piUrl}
+                subtitle={dateLine(data)}
+                logo={data.logo}
+                url={data.url}
+                tags={data.tags}
+                class="pb-8 prose-li:my-0.5 prose-ul:my-1"
+              >
+                <Body />
+              </TimeLineElement>
+            ))}
+          </div>
+        </>
+      )
+    )
+  }
+</BaseLayout>

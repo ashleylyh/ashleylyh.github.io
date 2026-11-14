@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
+import { GA_MEASUREMENT_ID, TRANSITION_API } from '../config';
 
 export interface Props {
 	title: string;
@@ -11,12 +12,14 @@ export interface Props {
 }
 
 const { title, description, image = '/social_img.webp', ogType = 'website' } = Astro.props;
+// Analytics only on the built site, so local `npm run dev` previews aren't counted.
+const loadAnalytics = import.meta.env.PROD && GA_MEASUREMENT_ID;
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 <meta name="generator" content={Astro.generator} />
 
 <!-- Primary Meta Tags -->
@@ -37,3 +40,35 @@ const { title, description, image = '/social_img.webp', ogType = 'website' } = A
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Google tag (gtag.js) -->
+{
+	loadAnalytics && (
+		<>
+			<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+			<script is:inline define:vars={{ gaId: GA_MEASUREMENT_ID, spaNav: TRANSITION_API }}>
+				window.dataLayer = window.dataLayer || [];
+				window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+				// Guard: with View Transitions this head script can be seen again on page swaps; set up only once.
+				if (!window.__gaInitialized) {
+					window.__gaInitialized = true;
+					window.gtag('js', new Date());
+					if (spaNav) {
+						// Pages change without a full reload, so send a page_view on every navigation
+						// ("astro:page-load" also fires on the first load).
+						window.gtag('config', gaId, { send_page_view: false });
+						document.addEventListener('astro:page-load', () => {
+							window.gtag('event', 'page_view', {
+								page_location: location.href,
+								page_path: location.pathname,
+								page_title: document.title,
+							});
+						});
+					} else {
+						window.gtag('config', gaId);
+					}
+				}
+			</script>
+		</>
+	)
+}

@@ -6,5 +6,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ashleylyh.github.io',
-  integrations: [mdx(), sitemap(), tailwind()]
+  integrations: [mdx(), sitemap(), tailwind()],
+  // old URL from before the CV page was split into About Me + Experience
+  redirects: { '/cv': '/about' },
 });

@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+import { getCollection } from "astro:content";
+import { dateLine, withBodies } from "../lib/timeline";
+
+// Content lives in:
+//   src/content/pages/about.md     — profile text (body), awards, certifications, skills, languages, interests
+//   src/content/education/*.md     — one file per school
+const aboutEntry = (await getCollection("pages")).find((p) => p.slug === "about")!;
+const about = aboutEntry.data;
+const { Content: Profile } = await aboutEntry.render();
+const education = await withBodies(await getCollection("education"));
+---
+
+
+<BaseLayout title="About Me" sideBarActiveItemID="about">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Profile</div>
+  </div>
+
+  <div class="mb-10 md:text-justify prose max-w-none">
+    <Profile />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    {
+      education.map(({ data, Body }) => (
+        <TimeLineElement
+          title={data.title}
+          lines={[data.program, data.gpa]}
+          subtitle={dateLine(data)}
+          logo={data.logo}
+          url={data.url}
+        >
+          <Body />
+        </TimeLineElement>
+      ))
+    }
+  </div>
+
+  {
+    about.awards?.length > 0 && (
+      <>
+        <div class="mb-5">
+          <div class="text-3xl w-full font-bold">Awards & Honors</div>
+        </div>
+        {/* Year | Award | Description. Newest start year first; same start year keeps the order in about.md.
+            On phones the description wraps under the award name. */}
+        <div class="mx-1 mb-10 grid grid-cols-[max-content_minmax(0,1fr)] md:grid-cols-[max-content_minmax(0,1fr)_minmax(0,1.2fr)] gap-x-6">
+          {[...about.awards].sort((a, b) => b.date.slice(0, 4).localeCompare(a.date.slice(0, 4))).map((a, i) => (
+            <>
+              <div class:list={["py-2 font-light whitespace-nowrap", { "border-t border-base-300": i > 0 }]}>{a.date}</div>
+              <div class:list={["py-2 font-semibold", { "border-t border-base-300": i > 0 }]}>{a.title}</div>
+              <div class:list={["col-start-2 md:col-start-auto pb-2 md:py-2 text-sm md:text-base", { "md:border-t md:border-base-300": i > 0 }]}>
+                {a.description}
+              </div>
+            </>
+          ))}
+        </div>
+      </>
+    )
+  }
+
+  {
+    about.certifications?.length > 0 && (
+      <>
+        <div class="mb-5">
+          <div class="text-3xl w-full font-bold">Certifications</div>
+        </div>
+        <ul class="mx-1 mb-10 grid gap-2">
+          {about.certifications.map((c) => (
+            <li class="flex items-center gap-3">
+              <img src={c.logo ?? "/images/icons/certificate.svg"} alt="" width="20" height="20" class="w-5 h-5 object-contain shrink-0" loading="lazy" />
+              {c.url ? <a href={c.url} target="_blank" class="link">{c.name}</a> : c.name}
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+
+  {
+    about.skills?.length > 0 && (
+      <>
+        <div class="mb-5">
+          <div class="text-3xl w-full font-bold">Skills</div>
+        </div>
+        <div class="grid gap-4 mx-1">
+          {about.skills.map((group) => (
+            <div>
+              <h3 class="font-semibold mb-2">{group.category}</h3>
+              <div class="flex flex-wrap gap-x-6 gap-y-2">
+                {group.items.map((item) => (
+                  <span class="inline-flex items-center gap-2">
+                    {item.logo && <img src={item.logo} alt="" width="20" height="20" class="w-5 h-5 object-contain shrink-0" loading="lazy" />}
+                    {item.name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </>
+    )
+  }
+
+  {
+    about.languages?.length > 0 && (
+      <>
+        <div class="mb-5 mt-10">
+          <div class="text-3xl w-full font-bold">Languages</div>
+        </div>
+        {/* name (+ level) | progress bar | percent */}
+        <div class="mx-1 mb-10 grid grid-cols-[minmax(6rem,max-content)_minmax(0,1fr)_3rem] items-center gap-x-4 gap-y-3">
+          {about.languages.map((lang) => (
+            <>
+              <div>
+                <div class="font-semibold">{lang.name}</div>
+                {lang.level && <div class="text-sm font-light">{lang.level}</div>}
+              </div>
+              <progress class="progress progress-primary w-full h-3" value={lang.percent} max="100" aria-label={`${lang.name} proficiency`}></progress>
+              <div class="text-sm text-right tabular-nums">{lang.percent}%</div>
+            </>
+          ))}
+        </div>
+      </>
+    )
+  }
+
+  {
+    about.interests?.length > 0 && (
+      <>
+        <div class="mb-5 mt-10">
+          <div class="text-3xl w-full font-bold">Interests</div>
+        </div>
+        <div class="mx-1 mb-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {about.interests.map((it) => (
+            <div class="flex gap-3 items-start rounded-box bg-base-200 p-4">
+              {it.icon &&
+                (it.icon.startsWith("/") ? (
+                  <img src={it.icon} alt="" width="28" height="28" class="w-7 h-7 object-contain shrink-0" loading="lazy" />
+                ) : (
+                  <span class="text-2xl leading-none shrink-0" aria-hidden="true">{it.icon}</span>
+                ))}
+              <div>
+                <div class="font-semibold">{it.name}</div>
+                {it.description && <p class="text-sm mt-1">{it.description}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </>
+    )
+  }
+</BaseLayout>

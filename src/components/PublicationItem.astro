@@ -1,0 +1,114 @@
+---
+import type { Publication } from "../lib/publications";
+import { AUTHOR_NAMES } from "../config";
+
+interface Props {
+  entry: Publication;
+}
+const { entry } = Astro.props;
+const pub = entry.data;
+const { Content: Abstract } = await entry.render();
+const hasAbstract = entry.body.trim().length > 0;
+
+const isMe = (name: string) => AUTHOR_NAMES.includes(name.replace(/[*†‡]+$/, "").trim());
+const typeLabel: Record<string, string> = {
+  conference: "Conference",
+  journal: "Journal",
+  workshop: "Workshop",
+  preprint: "Preprint",
+  thesis: "Thesis",
+  other: "Other",
+};
+const linkLabels: [keyof typeof pub.links, string][] = [
+  ["pdf", "PDF"],
+  ["arxiv", "arXiv"],
+  ["doi", "DOI"],
+  ["code", "Code"],
+  ["project", "Project Page"],
+  ["video", "Video"],
+  ["slides", "Slides"],
+  ["poster", "Poster"],
+];
+const links = linkLabels.filter(([key]) => pub.links[key]);
+---
+
+<article class="flex flex-col md:flex-row gap-4 md:gap-6 py-5">
+  {
+    pub.image && (
+      <img
+        src={pub.image}
+        alt=""
+        loading="lazy"
+        class="w-full md:w-48 md:shrink-0 aspect-video object-cover rounded-lg bg-base-200"
+      />
+    )
+  }
+  <div class="min-w-0 grow">
+    <h3 class="text-lg font-bold leading-snug">{pub.title}</h3>
+
+    <p class="mt-1">
+      {pub.authors.map((name, i) => (<>{i > 0 && ", "}<span class:list={[{ "font-semibold text-accent": isMe(name) }]}>{name}</span></>))}
+    </p>
+
+    <div class="mt-2 flex flex-wrap items-center gap-2">
+      <span class="italic">{pub.venue}</span>
+      <span class="badge badge-info border-0">{typeLabel[pub.type]}</span>
+      {pub.status && <span class="badge badge-success border-0">{pub.status}</span>}
+      {pub.award && <span class="badge badge-warning border-0 whitespace-nowrap">🏆 {pub.award}</span>}
+      {pub.draft && <span class="badge badge-error border-0">Draft — not published</span>}
+    </div>
+
+    {
+      links.length > 0 && (
+        <div class="mt-3 flex flex-wrap gap-2">
+          {links.map(([key, label]) => (
+            <a class="btn btn-outline btn-xs" href={pub.links[key]} target="_blank" rel="noopener">
+              {label}
+            </a>
+          ))}
+        </div>
+      )
+    }
+
+    {
+      hasAbstract && (
+        <details class="mt-3 group">
+          <summary class="cursor-pointer text-sm font-semibold select-none">Abstract</summary>
+          <div class="prose max-w-none mt-2 text-sm md:text-justify">
+            <Abstract />
+          </div>
+        </details>
+      )
+    }
+
+    {
+      pub.bibtex && (
+        <details class="mt-2">
+          <summary class="cursor-pointer text-sm font-semibold select-none">BibTeX</summary>
+          <div class="mt-2 rounded-lg bg-base-200 overflow-hidden">
+            <div class="flex justify-end border-b border-base-300 px-2 py-1">
+              <button type="button" class="btn btn-ghost btn-xs" data-copy-bibtex>Copy</button>
+            </div>
+            <pre class="p-3 text-xs overflow-x-auto whitespace-pre"><code>{pub.bibtex.trim()}</code></pre>
+          </div>
+        </details>
+      )
+    }
+  </div>
+</article>
+
+<script>
+  // Copy-to-clipboard for BibTeX boxes (runs once per page, handles every item).
+  document.addEventListener("click", async (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>("[data-copy-bibtex]");
+    if (!btn) return;
+    const code = btn.closest("div.rounded-lg")?.querySelector("code")?.textContent ?? "";
+    try {
+      await navigator.clipboard.writeText(code);
+      btn.textContent = "Copied!";
+    } catch {
+      btn.textContent = "Select & copy";
+    }
+    setTimeout(() => (btn.textContent = "Copy"), 1500);
+  });
+</script>

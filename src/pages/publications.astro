@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PublicationItem from "../components/PublicationItem.astro";
+import { getPublications, groupByYear } from "../lib/publications";
+
+// Content lives in src/content/publications/*.md (one file per paper)
+const pubs = await getPublications();
+const years = groupByYear(pubs);
+const hasEqualContribution = pubs.some((p) => p.data.authors.some((a) => a.trim().endsWith("*")));
+---
+
+<BaseLayout title="Publications" sideBarActiveItemID="publications">
+  <div class="mb-2">
+    <div class="text-3xl w-full font-bold">Publications</div>
+  </div>
+  {hasEqualContribution && <p class="text-sm font-light mb-4">* Equal contribution</p>}
+
+  {
+    pubs.length === 0 ? (
+      <div class="bg-base-200 border-l-4 border-info w-full p-4 mt-5">
+        <p class="font-bold">Coming soon</p>
+        <p>Publications will be listed here as they are released.</p>
+      </div>
+    ) : (
+      years.map(([year, items]) => (
+        <section class="mt-6">
+          <h2 class="text-2xl font-bold">{year}</h2>
+          <div class="divide-y divide-base-300">
+            {items.map((entry) => (
+              <PublicationItem entry={entry} />
+            ))}
+          </div>
+        </section>
+      ))
+    )
+  }
+</BaseLayout>

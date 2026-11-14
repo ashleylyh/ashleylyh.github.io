@@ -1,5 +1,8 @@
 ---
-const { title, subtitle } = Astro.props;
+const { title, subtitle, logo, url, tags = [], lines = [], pi, piUrl, class: className } = Astro.props;
+// pi / piUrl: optional supervisor line, name linked to piUrl when given
+// class: extra classes on the content column, e.g. "pb-8" for more space below an entry (keeps the timeline line continuous)
+// lines: extra subtitle lines shown above `subtitle` (e.g. program, GPA)
 ---
 
 <div class="flex">
@@ -7,11 +10,37 @@ const { title, subtitle } = Astro.props;
     <span class="w-4 h-4 bg-primary block rounded-full mt-1"></span>
     <span class="education__line bg-primary block h-full w-[2px] translate-x-[7px]"></span>
   </div>
-  <div class="experience__data bd-grid px-5">
-    <h3 class="font-semibold mb-1">{title}</h3>
-    <span class="font-light text-sm">{subtitle}</span>
-    <p class="my-2 text-justify">
+  <div class:list={["experience__data bd-grid pl-3 pr-0 md:px-5 w-full min-w-0", className]}>
+    <div class="flex items-start gap-3">
+      {
+        logo && (
+          <a href={url} target="_blank" class="shrink-0">
+            <img src={logo} alt="" width="40" height="40" class="w-8 h-8 md:w-10 md:h-10 rounded object-contain bg-base-100" loading="lazy" />
+          </a>
+        )
+      }
+      <div>
+        <h3 class="font-semibold mb-1">{title}</h3>
+        {lines.filter(Boolean).map((line) => <div class="text-sm font-medium">{line}</div>)}
+        {
+          pi && (
+            <div class="text-sm font-medium">
+              PI: {piUrl ? <a href={piUrl} target="_blank" rel="noopener" class="link">{pi}</a> : pi}
+            </div>
+          )
+        }
+        <span class="font-light text-sm">{subtitle}</span>
+      </div>
+    </div>
+    <div class="my-2 md:text-justify prose max-w-none">
       <slot />
-    </p>
+    </div>
+    {
+      tags.length > 0 && (
+        <div class="flex flex-wrap gap-1 mb-2">
+          {tags.map((tag) => <span class="badge badge-warning border-0">{tag}</span>)}
+        </div>
+      )
+    }
   </div>
 </div>
